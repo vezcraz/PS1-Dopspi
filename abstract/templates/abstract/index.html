@@ -1,0 +1,44 @@
+{% extends "./base_index.html" %}
+
+{% block yearname %}
+    {% for post in posts|slice:":1" %}
+        <h1 style="color: white;">Statistical Abstract <span>{{post.Year_Published}}</span></h1>
+    {% endfor %}
+{% endblock yearname %}
+
+{% load static %}
+{% block content_index %}
+    {% for post in posts %}
+        <div class="col-lg-3" style="padding-bottom:25px;">
+            <div class="card text-center" id="{{"C"|add:post.Color_Number}}">
+                <div class="title" >
+                    <h2 style=" height:80px;">{{post.Table_Content}}</h2>
+                </div>
+                <a href="{{"./"|add:post.Chapter_Number}}">View </a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content_index %}
+
+{% block extlink %}
+    {% for ex in ext %}
+        <li class="nav-item">
+            <a class="nav-link" href="{{ex.Link}}" style="color: black;"><img src="{{ ex.Icon.url }}", style="width:110px; height:120px;"> &nbsp;{{ex.Name}}</a>
+        </li>
+        
+    {% endfor %}
+{% endblock extlink %}
+
+{% block message %}
+    {% for mesg in messagedata|slice:":1" %}
+        <div id="J"><a href="mesg.html"><img src="{{mesg.Message.url}}" style="width:200px"></a></div>
+    {% endfor %}
+{% endblock message %}
+
+{% block navigation %}
+    {% for nav in navbar %}
+        <li class="nav-item">
+            <a class="nav-link" href="{{nav.Link.url}}">{{nav.Name}}</a>
+        </li>
+    {% endfor %}
+{% endblock navigation %}

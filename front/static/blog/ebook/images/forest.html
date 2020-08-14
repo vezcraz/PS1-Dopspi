@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../css/page.css">
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:350px;" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+  
+   <div class="blank" >
+    <ul class="blank" style="margin-bottom:50%">   
+    </ul>
+   </div>
+       <a href="./Forest/Forest Area.html "  class="w3-bar-item w3-button">Forest Area</a>  
+       <a href="./Forest/Forest Produce.html" class="w3-bar-item w3-button">Forest Produce</a>  
+       <a href="./Forest/Forest Organisation.html" class="w3-bar-item w3-button">Forest Organisation</a>  
+        <div>
+  <ul class="major">
+    <li ><a href class="w3-bar-item w3-button">Economy </a>
+        <ul class="dropdown">
+            <li><a href="./Forest/economy.html">Share of Forestry Sector</a></li>
+            <li><a href="./Forest/economy_.html">Revenue</a></li>
+            <li><a href="./Forest/economy__.html">Expenditure</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+       <a href="./Forest/forest protection.html" class="w3-bar-item w3-button"></a>  
+       <div>
+  <ul class="major">
+    <li ><a href class="w3-bar-item w3-button"> Forest Protection, Forest Fire and Fire Management</a>
+        <ul class="dropdown">
+            <li><a href="./Forest/forest protection.html">Forest Protection, Forest Fire</a></li>
+            <li><a href="./Forest/forest management.html">Forest Management</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+         
+       <a href="./Forest/wildlife.html" class="w3-bar-item w3-button">Wildlife and Bio-Diversity Conservation</a>  
+       <a href="./Forest/afforestation.html" class="w3-bar-item w3-button">Diversion of Forest Land, Encroachment and Afforestation</a>  
+       <a href="./Forest/misc.html" class="w3-bar-item w3-button">Miscellaneous Information</a>  
+
+</div>
+
+<div class="w3-main" style="margin-left:350px">
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <ul style="float:left" class="topbar">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="../Contents.docx">Contents</a></li>
+        <li><a href="./message.png">Message</a></li>
+        <li><a href="./preface.png">Preface</a></li>
+        <li><a href="./highlight.docx">Highlights</a></li>
+        <li><a href="../graph.xlsx">Graphs</a></li>
+        <li><a href="../acronym.xlsx">Acronym</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="w3-container">
+  <img src="./forestimg.png" id="pb" style="margin-top: 1px;">
+  
+
+</div>
+   
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+     
+</body>
+</html>

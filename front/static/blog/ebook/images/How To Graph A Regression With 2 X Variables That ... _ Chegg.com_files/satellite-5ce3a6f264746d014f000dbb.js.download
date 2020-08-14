@@ -1,0 +1,94 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  window.rio = {
+
+  /**
+   * Logs an event in Rio.
+   *
+   * @param argEventSource (string) - Event source (e.g. 'web.math_solver').
+   * @param argEventTitle (string) - Event title (e.g. 'math_input_go').
+   * @param argEventVersion (string) - Event version (e.g. '1.0.0').
+   * @param argEventPayload (object) - Event payload (data to log).
+   * @param argAdobePageName (string) - Adobe page name (e.g. 'homepage').
+   * @param callback (function) - Optional. Callback to fire after log event is complete.
+   */
+  logEvent: function(argEventSource, argEventTitle, argEventVersion, argEventPayload, argAdobePageName, callback){
+    var eventSource = argEventSource || '';
+    var eventTitle = argEventTitle || '';
+    var eventVersion = argEventVersion || '';
+    var eventPayload = argEventPayload || {};
+    var adobePageName = argAdobePageName || '';
+
+    var eventSourceStartsWithSlash = (eventSource.length > 0 && eventSource[0] === "/");
+    var isV2 = eventSourceStartsWithSlash;
+    var url = isV2 ? 'https://fn.chegg.com/log/log-event-v2' : 'https://fn.chegg.com/log/log-event';
+
+    // Get user uuid and auth state from browser cookie
+    var cookie = document.cookie ? document.cookie.split(';') : [];
+    var userUuidCookie = cookie.find(function(cookieItem){
+      return cookieItem.trim().indexOf('_sdsat_cheggUserUUID=') > -1;
+    });
+    var userUuid = userUuidCookie ? userUuidCookie.trim().replace('_sdsat_cheggUserUUID=', '') : '';
+    var authStateCookie = cookie.find(function(cookieItem){
+      return cookieItem.trim().indexOf('_sdsat_authState=') > -1;
+    });
+    var authState = authStateCookie ? authStateCookie.trim().replace('_sdsat_authState=', '') : '';
+
+    var data;
+
+    if(isV2) {
+      data = {
+        cloud_events_version: "0.1",
+        event_type: eventTitle,
+        event_type_version: eventVersion,
+        source: eventSource,
+        data: eventPayload,
+        extensions: {
+          client_common: {
+            page_name: adobePageName,
+            referral_url: document.referrer || '',
+            url: window.location.href,
+            auth_state: authState.toLowerCase().split(' ').join('_'),
+            chegg_uuid: userUuid,
+          }
+        }
+      };
+    } else {
+      data = {
+        event_metadata: {
+          event_title: eventTitle,
+          event_version: eventVersion,
+        },
+        session_data: {
+          chegg_uuid: userUuid,
+          adobe_pagename: adobePageName,
+          referral_url: document.referrer || '',
+          auth_state: authState.toLowerCase().split(' ').join('_'),
+          event_source: eventSource
+        },
+        event_payload: eventPayload
+      };
+    }
+
+    // @TODO: Set content type
+    // The default content type is application/x-www-form-urlencoded.
+    // Ideally the API should only accept application/json which throws CORS error as of now as correct headers are not set.
+    // Update the content-type as required.
+    $.ajax({
+      method: 'POST',
+      url: url,
+      data: JSON.stringify(data),
+      xhrFields: {
+        withCredentials: true
+      },
+      error: function(error){
+        console.log("Error logging event in Rio:", JSON.stringify(data), error);
+      },
+      complete: function(){
+        if(callback){
+          callback();
+        }
+      }
+    });
+  }
+};
+});

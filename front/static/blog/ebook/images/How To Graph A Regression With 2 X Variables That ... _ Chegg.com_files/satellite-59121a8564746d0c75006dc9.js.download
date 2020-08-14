@@ -1,0 +1,29 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  if (_satellite.getVar('inNativeApp') !== "yes") {
+var google_tag_params =
+{ 
+  prodid: _satellite.getVar('trimmedPageDetail'),
+  solutionid: _satellite.getVar('trimmedPageDetail'),
+  questionid: _satellite.getVar('trimmedPageDetail'),
+  qasubject: _satellite.getVar('parentSubject'),
+  booksubject: _satellite.getVar('parentSubject'),
+  booksubsubject: _satellite.getVar('subSubject'),
+  booksubsubsubject: _satellite.getVar('subSubSubject')
+};
+//console.log(google_tag_params); 
+/* <![CDATA[ */
+var google_conversion_id = 1015011856;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+
+var js = document.createElement("script");
+
+js.type = "text/javascript";
+js.src = '//www.googleadservices.com/pagead/conversion.js';
+js.async = true;
+
+document.body.appendChild(js);
+
+}
+});

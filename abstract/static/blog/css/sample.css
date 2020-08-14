@@ -1,0 +1,43 @@
+/*h2{
+
+	padding-top: 20px;
+	text-align: center;
+	
+}
+
+p{
+	text-align: 30px;
+	text-align: center;
+}
+
+.navbar{
+	margin:50px;
+	margin-right: 60px;
+	margin-left: 80px;
+}*/
+
+
+
+
+
+/*body{
+	background-image: url("logo.png");
+}*/
+
+.container{
+	padding-top: 20px;
+	margin:auto;
+}
+
+.table{
+	width:65%;
+	margin:auto auto;
+
+}
+
+body a
+{
+	color: pink;
+}
+
+

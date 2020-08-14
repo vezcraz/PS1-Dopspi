@@ -1,0 +1,123 @@
+
+    div.navbar
+    {
+       width: 100%;
+       background-color: black;
+    }
+    div.navbar ul
+    {
+        list-style-type: none;
+        padding:10px;
+        position: absolute;
+        top:125px;
+
+
+    }
+    div.navbar>ul
+    {
+       
+        width:10000px;
+        background-color:black;
+        padding:0px;
+    }
+    div.navbar >ul >li 
+    {
+        
+        background-color: black;
+        padding:10px 50px;
+        margin:1px;
+    }
+    div.navbar >ul >li >a
+    {
+        color: white;
+        text-decoration: none;
+        font-size: 2em;
+
+
+    }
+    div.navbar>ul>li:hover
+    {
+        background-color: crimson;
+
+    }
+    div.navbar>ul>li>ul
+    {
+        display:none;
+       
+    }
+
+    div.navbar>ul>li:hover>ul
+    {
+        display:block;
+
+
+    }
+    ul.dropdown
+    {
+        position:absolute;
+        margin-top: -68px;
+        margin-left:-50px;
+        width:300px;
+        background-color:#f9f9f9;;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    }
+    ul.dropdown>li
+    {
+        position:relative;
+    }
+    ul.dropdown>li>a
+    {
+        font-size:1.8em;
+        text-decoration: none;
+        color:black;
+    }
+
+    ul.dropdown>li:hover
+    {
+        background-color: #f1f1f1;
+        width:410px;
+    }
+    ul.dropdown>li>ul
+    {
+        display:none;
+
+    }
+    ul.dropdown>li:hover>ul
+    {
+        display:block;
+        position:absolute;
+        margin-top:-128px;
+        margin-left:410px;
+        width:600px;
+        background-color:#f9f9f9;;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    }
+    ul.dropdown>li>ul>li>a
+    {
+        font-size:1.8em;
+        text-decoration: none;
+        color:black;
+    }
+    h1
+    {
+        font-size: 4em;
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom:5px solid black;
+    }
+    div.main_img>img
+    {
+        margin-top: 80px;
+        margin-left: 15px;
+        width:60%;
+    }
+
+    ul.sidebar>li:hover
+    {
+        background-color: #f1f1f1;
+    }
+    ul.dropdown
+    {
+        width:400px;
+    }

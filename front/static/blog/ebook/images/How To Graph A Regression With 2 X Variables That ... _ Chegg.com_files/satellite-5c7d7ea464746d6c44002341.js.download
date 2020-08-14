@@ -1,0 +1,17 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  // don't set this on order confirmation pixel.  We want to know the last order key
+// not the order that was just placed.
+if (_satellite.getVar('pageName').indexOf('order confirmation pixel') === -1) {
+
+	var cookieVal = _satellite.readCookie('O');
+	var cookieKey = 'lok';
+
+	if (typeof cookieVal !== "undefined" && cookieVal != 0 && cookieVal.length > 1) {
+		_satellite.setCookie(cookieKey, cookieVal);
+	}
+}
+
+var __affLt = _satellite.getVar('showLinkTrust');
+var __affAi = _satellite.getVar('orderAffiliateID');
+var __affAcp = _satellite.getVar('orderAFFCommissionPercentage');
+});

@@ -1,0 +1,42 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  /*if(typeof(_satellite.readCookie('OptanonAlertBoxClosed')) === 'undefined') {
+  _satellite.notify('++++++ Adobe clicktracking delayed+++++');
+  $('a').click(function (e) {
+      e.preventDefault();                   
+      var goTo = this.getAttribute("href"); 
+      setTimeout(function(){
+           window.location = goTo;
+      }, 500);                            
+  }); 
+$('a').click(function (e) {
+      e.preventDefault();                   
+      var goTo = this.getAttribute("href"); s.registerPostTrackCallback(function(){  window.location = goTo;console.log('called');})
+                              
+  }); 
+
+} */
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  //console.log(parts);
+  if (parts.length == 2) {
+    return parts;
+  }
+}
+ 
+try{
+  if(typeof(getCookie('OptanonConsent')) !='undefined' && !getCookie('OptanonConsent')[1].includes("NotLandingPage")){
+   _satellite.notify('++++++ Adobe clicktracking delayed+++++');
+   $('a').click(function (e) {
+       if(this.getAttribute("target") !== '_blank')
+       {  
+         	_satellite.setDebug('...............Preventing Default ......');
+          e.preventDefault();     
+        	var goTo = this.getAttribute("href"); s.registerPostTrackCallback(function(){  window.location = goTo;_satellite.notify('t called'); });setTimeout(function () { _satellite.notify('No T call returned'); window.location = goTo; },2000);   
+       }  
+
+    }); 
+  } 
+}
+catch(e){_satellite.notify('error at consent linkclick track' +e);}
+});

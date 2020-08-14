@@ -1,0 +1,75 @@
+
+.table
+{
+	width:70% !important;
+	margin: auto auto;
+}
+
+table
+{
+	border:3px solid white !important;
+	margin-top:10px;
+}
+
+.table a
+{
+	color:white;
+}
+table a:hover
+{
+	text-decoration: none;
+}
+
+#backgroundImage{z-index: 1;}
+
+#backgroundImage:before {
+   content: "";
+   position: absolute;
+   z-index: -1;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-image: url("../images/backinf.png");
+   background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.7;
+    filter:alpha(opacity=70);
+    height:100%;
+    width:100%;
+ }
+
+#forestImage:before {
+   content: "";
+   position: absolute;
+   z-index: -1;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-image: url("../images/forestimg.png");
+   background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.7;
+    filter:alpha(opacity=70);
+    height:100%;
+    width:100%;
+ }
+
+#envImage:before {
+   content: "";
+   position: absolute;
+   z-index: -1;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-image: url("../images/envimg.png");
+   background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.7;
+    filter:alpha(opacity=70);
+    height:200%;
+    width:140%;
+
+ }

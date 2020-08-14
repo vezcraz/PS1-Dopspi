@@ -1,0 +1,29 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  
+function OptanonWrapper() {
+    var el = document.getElementsByClassName("optanon-alert-box-wrapper");
+    function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        //console.log(parts);
+        if (parts.length == 2) {
+            return parts;
+        }
+    }
+
+    function removeBanner(elements) {
+      //  _satellite.notify('++COOKIE VALEI ' + getCookie('OptanonConsent')[1].includes("NotLandingPage"));
+        if (!getCookie('OptanonAlertBoxClosed')) {
+            if (typeof getCookie('OptanonConsent') != 'undefined' && getCookie('OptanonConsent')[1].includes("NotLandingPage") && elements[0] != undefined) {
+                elements[0].remove();
+                _satellite.notify('++OPTANON BANNER REMOVED/CLOSED++++');
+                Optanon.SetAlertBoxClosed()
+            }
+        }
+    }
+    removeBanner(el);
+
+}
+
+OptanonWrapper();
+});

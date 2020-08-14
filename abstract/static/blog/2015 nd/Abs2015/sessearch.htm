@@ -1,0 +1,622 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+</head>
+<body>
+
+<!-- Copy the code below and paste it on the page where you want to show the search results. -->
+<!-- Search Engine Code Start-->
+<div style='padding:5px;display:none;position:absolute;background:black;filter:alpha(opacity=85);-moz-opacity:.85;opacity:.85;z-index:990' id='xtr_bghider'></div>
+<div style='display:none;position:absolute;z-index:999;overflow:auto;padding:20px;border:15px solid black;background:white;' id='xtr_def_results'></div>
+<link rel="stylesheet" type="text/css" href="sesajax.css" />
+<form name="SearchForm" id="SearchForm" action="#" onsubmit="return false">
+<span class="b_normal"><style type='text/css'>
+<!--
+.b_normal {font-size:12px;color:#003063;font-family:Verdana,Arial,Helvetica}
+-->
+</style>Search: 
+<input id="ses-q-field" type="text" name="q" size="20">
+<input type="submit" value="Go">
+<br />
+<input type="radio" name="op" value="and" checked>all words</input>
+<input type="radio" name="op" value="or">any words</input>
+<input type="radio" name="op" value="ph">exact phrase</input>
+</span>
+</form>
+
+<script type='text/javascript'>
+<!--
+function GetOptionFromUrl (optionName)
+{
+	var str = window.location.href;
+	return GetOptionFromUrlStr (str, optionName);
+}
+
+function GetOptionFromUrlStr (str, optionName)
+{
+	var ind = str.indexOf (optionName + '=');
+	if (ind != -1)
+	{
+		var optEnd = str.indexOf ('&', ind + optionName.length + 1);
+		if (optEnd == -1)
+		{
+			return decodeURIComponent (str.substr (ind + optionName.length + 1));
+		}
+		else
+		{
+			return decodeURIComponent (str.substring (ind + optionName.length + 1, optEnd));
+		}
+	}
+	return 0;
+}
+
+function ReplaceAll (str, src, trg)
+{
+	var s = str;
+	var start = 0;
+	while(true)
+	{
+		var ind = s.indexOf(src, start);
+		if (ind == -1)
+		{
+			break;
+		}
+		s = s.substring (0, ind) + trg + s.substr (ind + src.length);
+		start = ind + trg.length;
+	}
+	return s;
+}
+
+function FindAllFormItems (form)
+{
+	var els = new Array ();
+	if (form)
+	{
+		var ar = form.elements;
+		var i;
+		for(i=0;ar && i<ar.length;i++)
+		{
+			if (ar [i].name)
+			{
+				els [els.length] = ar [i].name;
+			}
+		}
+	}
+	return els;
+}
+
+function ConvertUtf8 (input)
+{
+	var output = '';
+	for (var n = 0; n < input.length; n++)
+	{
+		var c = input.charCodeAt (n);
+		if (c < 128) output += String.fromCharCode (c);
+		else if ((c > 191) && (c < 224))
+		{
+			output += String.fromCharCode (((c & 31) << 6) | (input.charCodeAt (n + 1) & 63));
+			n++;
+		}
+		else
+		{
+			output += String.fromCharCode (((c & 15) << 12) | ((input.charCodeAt (n + 1) & 63) << 6) | (input.charCodeAt (n + 2) & 63));
+			n+=2;
+		}
+	}
+	return output;
+}
+
+function UrlToFormItems (form)
+{
+	var els = FindAllFormItems (form);
+	var i;
+	var bUTF8 = true;
+	for (i = 0; els && i < els.length; i++)
+	{
+		var nm = els [i];
+		var val = GetOptionFromUrl (nm);
+		if (form)
+		{
+			if (val)
+			{
+				if(nm && (nm.substr (0,1) == 'q' || nm.substr (0,2) == 'fq')) val = ReplaceAll (val, '+', ' ');
+				else if(nm == 'enc' && val.toLowerCase() == 'iso-8859-1') bUTF8 = false;
+				else if(nm == 'ae' && val.charCodeAt(0) == 223) {bUTF8 = false;continue;}
+			}
+			var el = form.elements [nm];
+			if (el && val)
+			{
+				if (el.type == 'checkbox') el.checked = val;
+				else if (el.type == 'select-one')
+				{
+					for (option = 0; option < el.options.length; option++) if (el.options [option].value == val) el.options [option].selected = 1;
+				}
+				else if (el.length)
+				{
+					for (j = 0; j < el.length; j++) if (el [j].value == val) el [j].checked = true;
+				}
+				else
+				{
+					if(nm == 'enc') el.value = 'utf-8';
+					else el.value = (bUTF8 ? ConvertUtf8 (val) : val);
+				}
+			}
+		}
+	}
+	document.bAnsi = !bUTF8;
+}
+
+function ClearSearchResults (resultsCodePart)
+{	
+	document.searchResultCode = '';
+}
+
+function AddToSearchResults (resultsCodePart)
+{
+	document.searchResultCode = document.searchResultCode + resultsCodePart;	
+}
+
+function ApplySearchResultsCode ()
+{
+	var resultsDiv = document.getElementById ('SearchResults');
+
+	if (resultsDiv && document.searchResultCode)
+	{
+		resultsDiv.innerHTML = document.searchResultCode;
+	}
+}
+UrlToFormItems (document.forms ['SearchForm']);
+//-->
+</script>
+<script type='text/javascript'>
+<!--
+//script optimized by www.xtreeme.com)
+function xtr_get_form_data(obj,pos){
+var arr=new Array
+var lastItem=0
+if(obj){
+for(var i=0;i<obj.elements.length;i++){
+var tagName=obj.elements[i].tagName
+if(tagName=="INPUT"){
+if(obj.elements[i].type=="text" || obj.elements[i].type=="hidden"){
+var o=new Object()
+o.name=obj.elements[i].name
+o.value=encodeURIComponent(obj.elements[i].value)
+arr [lastItem++]=o}
+if(obj.elements[i].type=="checkbox"){
+if(obj.elements[i].checked){
+var o=new Object()
+o.name=obj.elements[i].name
+o.value=encodeURIComponent(obj.elements[i].value)
+arr [lastItem++]=o
+}else{
+var o=new Object()
+o.name=obj.elements[i].name
+o.value="off"
+arr [lastItem++]=o}}
+if(obj.elements[i].type=="radio"){
+if(obj.elements[i].checked){
+var o=new Object()
+o.name=obj.elements[i].name
+o.value=encodeURIComponent(obj.elements[i].value)
+arr [lastItem++]=o}}}
+else if(tagName=="TEXTAREA"){
+var o=new Object()
+o.name=obj.elements[i].name
+o.value=encodeURIComponent(obj.elements[i].value)
+arr [lastItem++]=o}
+else if(tagName=="SELECT"){
+var sel=obj.elements[i]
+var o=new Object()
+o.name=sel.name
+o.value=encodeURIComponent(sel.options[sel.selectedIndex].value)
+arr [lastItem++]=o}}}
+var o=new Object()
+o.name='strt'
+o.value=(xtr_isset(pos)&&pos>=0)?encodeURIComponent(pos):"0"
+arr [lastItem++]=o
+return arr}
+function xtr_isset(obj){
+try{
+return(obj===undefined)?false:true}
+catch(err){}
+return false}
+function xtr_search_close_results(){
+var def_bgHider=document.getElementById('xtr_bghider')
+if(def_bgHider){
+def_bgHider.style.display='none'}
+var def_element=document.getElementById('xtr_def_results')
+if(def_element){
+def_element.style.display='none'}}
+function xtr_setup_results_element(){
+var customId=''
+if(customId&&customId.length>0&&document.getElementById(customId)){
+var custom_element=document.getElementById(customId)
+custom_element.innerHTML="<div id=\"SearchResults\"></div>"
+document.xtrUserResultsEl=true}
+else{
+var def_bgHider=document.getElementById('xtr_bghider')
+var def_element=document.getElementById('xtr_def_results')
+if(def_bgHider&&def_element){
+def_bgHider.innerHTML="<div id=\"results_div_top\" style=\"padding: 10px; padding-right:20px;\">"+
+"<div style=\"float: right; margin-bottom:10px; cursor:pointer;\">"+"<img src=\"btn-close.png\" onClick=\"javascript:xtr_search_close_results()\">"+"</div>"+
+"</div>"
+def_element.innerHTML="<div id=\"SearchResults\"></div>"
+document.xtrUserResultsEl=false}
+else{
+alert('Unable to find default search results target <div> element.')}}}
+function xtr_get_width(){
+var x=0
+if(self.innerHeight){
+x=self.innerWidth}
+else if(document.documentElement&&document.documentElement.clientHeight){
+x=document.documentElement.clientWidth}
+else if(document.body){
+x=document.body.clientWidth}
+return x}
+function xtr_get_height(){
+var y=0
+if(self.innerHeight){
+y=self.innerHeight}
+else if(document.documentElement&&document.documentElement.clientHeight){
+y=document.documentElement.clientHeight}
+else if(document.body){
+y=document.body.clientHeight}
+return y}
+function xtr_show_default_results_element(){
+var def_bgHider=document.getElementById('xtr_bghider')
+var def_element=document.getElementById('xtr_def_results')
+if(def_element&&def_bgHider){
+def_bgHider.style.display='block'
+def_element.style.display='block'
+xtr_on_resize()}}
+function GetQueryStringFromFormData(pos){
+var q=''
+var searchOption=xtr_get_form_data(document.getElementById('SearchForm'),pos)
+var i
+for(i=0;i<searchOption.length;i++){
+var o=searchOption [i]
+if(o.name&&o.name.length>0&&o.value)
+if(q.length==0)
+q=o.name+'='+o.value
+else
+q+='&'+o.name+'='+o.value}
+return q}
+function xtr_paging_link(url){
+var pos=GetOptionFromUrlStr(url,'strt')
+xtr_run_search(pos)}
+function xtr_run_search_submit(){
+xtr_run_search(0)}
+function xtr_run_search(pos){
+if(xtr_isset(document.isUsingJava)){
+if(document.isUsingJava){
+var applet=document.getElementById('SESSearch')
+if(applet){
+var searchOption=xtr_get_form_data(document.getElementById('SearchForm'),pos)
+var i
+for(i=0;i<searchOption.length;i++){
+var o=searchOption [i]
+if(o.name&&o.name.length>0&&o.value)
+applet.setParam(o.name,o.value)}
+applet.doSearch()
+if(xtr_isset(document.xtrUserResultsEl)&&!document.xtrUserResultsEl)
+xtr_show_default_results_element()}}
+else{
+if(window.SearchCtl&&window.SearchCtl.readyState==4){
+absPath=GetOptionFromUrl('dir')
+if(!absPath){
+absPath=GetAbsolutePath('')}
+var q=GetQueryStringFromFormData(pos)
+window.absPath=absPath
+window.searchString=q
+SearchCtl.Go(absPath,q)
+if(xtr_isset(document.xtrUserResultsEl)&&!document.xtrUserResultsEl)
+xtr_show_default_results_element()}}}}
+function xtr_on_resize(){
+var def_bgHider=document.getElementById('xtr_bghider')
+var def_element=document.getElementById('xtr_def_results')
+if(def_bgHider&&def_element){
+var hiderHeight=(xtr_get_height()-10)
+var hiderWidth=(xtr_get_width()-10)
+def_bgHider.style.left=0+'px'
+def_bgHider.style.top=0+'px'
+def_bgHider.style.width=hiderWidth+'px'
+def_bgHider.style.height=hiderHeight+'px'
+def_element.style.left=20+'px'
+def_element.style.top=60+'px'
+def_element.style.width=(hiderWidth-10-30-40-30-20)+'px'
+def_element.style.height=(hiderHeight-10-20-40-30-60)+'px'}}
+function xtr_key_down(e){
+if(document.getElementById('xtr_bghider')&&
+document.getElementById('xtr_def_results')&&
+(e.keyCode==27 || e.key=='esc')){
+xtr_search_close_results()}}
+function xtr_on_load(){
+xtr_setup_results_element()
+var form=document.forms ['SearchForm']
+if(form)
+xtr_js_set_event(form,'submit','xtr_run_search_submit')
+xtr_js_set_event(window,'resize','xtr_on_resize',true)
+xtr_js_set_event(window,'keydown','xtr_key_down',true)
+if(ShouldExecuteSearch()){
+var Opera=(navigator.userAgent.indexOf('Opera')!=-1)||(navigator.appName.indexOf('Opera')!=-1)||(window.opera)
+if(Opera)
+setTimeout("xtr_run_search(0)",200)
+else
+xtr_run_search(0)}}
+xtr_js_set_event(window,'load','xtr_on_load',true)
+
+
+function GetDirFromPath (path)
+{
+	var bslash = path.lastIndexOf ('\\');
+	var slash = path.lastIndexOf ('/');
+	if (bslash == -1 || slash > bslash)
+		bslash = slash;
+
+	if (bslash == -1)
+	{
+		return '';
+	}
+	else
+	{
+		return path.substring (0, bslash);
+	}
+}
+
+function GetAbsolutePath (rel)
+{
+	var curPath = document.location.href;
+	curPath = ReplaceAll (curPath, 'file:///', '');
+	curPath = ReplaceAll (curPath, 'file://', '');
+	curPath = ReplaceAll (curPath, '/', '\\');
+	if (curPath.length >= 2)
+	{
+		if (curPath.substr (1, 1) == '|')
+		{
+			curPath = curPath.substr (0, 1) + ':' + curPath.substr (2);
+		}
+		if (curPath.substr (1, 1) != ':')
+		{
+			curPath = '\\\\' + curPath;
+		}
+	}
+	var qm = curPath.indexOf('?');
+	if (qm != -1)
+		curPath = curPath.substr (0,qm);
+	curPath = decodeURIComponent (curPath);
+	
+	var root = GetDirFromPath (curPath);
+	if (rel.length > 2 && rel.substr (0, 2) == './') rel = rel.substr (2);
+	var absPath = root + '\\' + ReplaceAll (rel, '/', '\\');
+	return absPath;
+}
+
+function FormItemsToUrl (url, form)
+{
+	var queryString = url;
+	var els = FindAllFormItems (form);
+	var i;
+	if (form)
+	{
+		for (i = 0; i < els.length; i++)
+		{
+			var nm = els [i];
+			var val = form.elements [nm].value;
+			queryString += ((queryString.indexOf ('?') == -1) ? '?' : '&') + nm + '=' + val;
+		}
+	}
+	return queryString;
+}
+
+function SwitchSearchType (docURL, oldType, newType)
+{
+	if (docURL.indexOf('noswitch=1') == -1)
+	{
+		var newURL = ReplaceAll (docURL, 'mode=' + oldType, 'mode=' + newType + '&noswitch=1');
+		if (newURL.indexOf('mode=' + newType) == -1)
+			newURL += (newURL.indexOf('?')==-1?'?':'&') + 'mode=' + newType + '&noswitch=1';
+		window.location.href = newURL;
+		return true;
+	}
+	return false;
+}
+
+function GetQueryString ()
+{
+	var str = window.location.href;
+	var qm = str.indexOf('?');
+	if (qm == -1)
+		return '';
+	else
+		return str.substr (qm + 1);
+}
+
+function SubmitSearch ()
+{
+	var bSwitch = false;
+	try
+	{
+		var absPath = "";
+		var sepCh = "";
+		if (!window.SearchCtl || window.SearchCtl.readyState != 4)
+		{
+			bSwitch = true;
+		}
+		else
+		{
+			absPath = GetOptionFromUrl ('dir');
+			if (!absPath)
+			{
+				absPath = GetAbsolutePath ('');
+			}
+			var q = GetQueryString ();
+			window.absPath = absPath;
+			window.searchString = q;
+			SearchCtl.Go (absPath,q);
+		}
+	}
+	catch (e)
+	{
+		bSwitch = true;
+	}
+	
+	if (bSwitch)
+	{		
+		var compURL = window.location.href;
+		if (SwitchSearchType (compURL, 'activex', 'java'))
+			return false;
+	}
+}
+
+function ShouldExecuteSearch ()
+{
+	var fq = window.location.href.indexOf ('fq');
+	return (GetOptionFromUrl ('q') || GetOptionFromUrl ('qor') || GetOptionFromUrl ('qph') ||
+		fq != -1) ? true : false;
+}
+
+function SearchLoaded ()
+{
+	var query = ShouldExecuteSearch ();
+	if (query)
+	{
+		SubmitSearch ();
+	}
+}
+
+function IsActiveXCompatible()
+{
+	var Opera=(navigator.userAgent.indexOf('Opera')!=-1)||(navigator.appName.indexOf('Opera')!=-1)||(window.opera);
+	var IE4=(document.all&&!Opera) ;
+	var mac=((IE4)&&(navigator.appVersion.indexOf ("Mac")!=-1));
+	return (IE4&&!mac);
+}
+
+function GetUrlParams ()
+{
+	var arr = new Array;
+	var str = window.location.href;
+	var len = str.length;
+	var i = str.indexOf ('?');
+	if (i == -1) i = 0; else i++;
+	var itemStart = i;
+	var name;
+	var lastItem = 0;
+	for (; i <= len; i++)
+	{
+		if (i < len && str.charAt (i) == '=')
+		{
+			name = str.substring (itemStart, i);
+			itemStart = i + 1;
+		}
+		else if (i == len || str.charAt (i) == '&')
+		{
+			var value = str.substring (itemStart, i);
+			if (name && value)
+			{
+				var o = new Object ();
+				o.name = name;
+				o.value = value;
+				arr [lastItem++] = o;
+			}
+			name = null;
+			itemStart = i + 1;
+		}
+	}
+	return arr;
+}
+
+function IsJavaEnabled ()
+{
+	return (window.navigator && window.navigator.javaEnabled ());
+}
+
+function CreateJava()
+{
+	var pagePath;
+	var url = window.location.href;
+	var qInd = url.indexOf ('?');
+	if (qInd != -1)
+		pagePath = url.substr (0, qInd);
+	else
+		pagePath = url; 
+	
+	if (IsActiveXCompatible () && (!window.navigator || !window.navigator.javaEnabled()))
+	{
+		if (SwitchSearchType (url, 'java', 'activex'))
+			return;	
+	}
+	
+	var Opera=(navigator.userAgent.indexOf('Opera')!=-1)||(navigator.appName.indexOf('Opera')!=-1)||(window.opera);
+	var isIE=(document.all&&!Opera);
+	if (isIE)
+		document.write ("<object style=\"position:fixed;left:-5px;top:-5px;\" classid=\"clsid:8AD9C840-044E-11D1-B3E9-00805F499D93\" height=\"1\" width=\"1\" id=\"SESSearch\" VIEWASTEXT>\n" +
+			"<param name=\"code\" value=\"com.xtreeme.search.SESSearchApplet\" />\n" +
+			"<param name=\"archive\" value=\"sessearch.jar\">\n" +
+			"<param name=\"mayscript\" value=\"true\">\n");
+	else
+		document.write ("<object style=\"position:fixed;left:-5px;top:-5px;\" archive=\"sessearch.jar\" classid=\"java:com.xtreeme.search.SESSearchApplet.class\" type=\"application/x-java-applet\" height=\"1\" width=\"1\" id=\"SESSearch\" VIEWASTEXT>\n"+
+			"<param name=\"archive\" value=\"sessearch.jar\">\n" +
+			"<param name=\"mayscript\" value=\"true\">\n");
+			
+	var bWrap = false;
+	var paramNames = '';
+	
+	
+	if (!bWrap)
+	{
+		document.write("<param name=\"wrap\" value=\"" + pagePath + "\">\n");
+		paramNames += "wrap";
+	}
+	document.write("<param name=\"paramNames\" value=\"" + paramNames + "\">\n");
+
+	document.write("</object>");	
+	document.isUsingJava = true;	
+}
+
+function CreateActiveX()
+{
+	document.write ("<object width=\"1\" height=\"1\" style=\"display:none\" id=\"SearchCtl\" name=\"SearchCtl\" codebase=\"ses_ocx/sessearch.ocx#version=1,1,0,7\" classid=\"CLSID:3CBA13C3-58C7-47f1-9758-D4B255A50D52\" ></object>");
+	
+	document.isUsingJava = false;
+}
+
+function SetSearchType()
+{
+	var bActiveXCompatible = IsActiveXCompatible ()
+	var modeSet = GetOptionFromUrl ('mode');
+	if (modeSet == 'java') bActiveXCompatible = false;
+	else if (modeSet == 'activex') bActiveXCompatible = true;
+	if (bActiveXCompatible)
+	{
+		document.noReload=true;
+		CreateActiveX();
+	}
+	else
+	{
+		if (true || ShouldExecuteSearch ()) CreateJava();
+		document.noReload=false;
+	}
+}
+
+function xtr_js_set_event(obj,event,fun,bubble) {
+  if (obj) {
+    if (obj.addEventListener)
+      obj.addEventListener (event,eval(fun),bubble);
+    else if (obj.addEvent)
+      obj.addEvent(event,eval(fun));
+    else
+      obj.attachEvent('on'+event, eval(fun));
+  }
+}
+
+SetSearchType();
+//-->
+</script>
+
+<!-- Search Engine Code End-->
+
+</body>
+</html>

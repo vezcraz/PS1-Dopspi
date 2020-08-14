@@ -1,0 +1,115 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  try{
+	var ele = document.createElement("script");
+	ele.setAttribute( 'src', "//www.googletagmanager.com/gtag/js?id=AW-1001294238" );
+	ele.async = 'true';
+	document.body.appendChild(ele);
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'AW-1001294238');
+
+	// Adding global Google gtag for measuring DC remarketing performance
+	gtag('config', 'DC-5942083');
+	gtag('event', 'conversion', {
+	    'allow_custom_scripts': true,
+	    'u1': _satellite.getVar('subCategory2') ? _satellite.getVar('subCategory2') : '',
+	    'u2': _satellite.getVar('subCategory3') ? _satellite.getVar('subCategory3') : '',
+	    'u3': _satellite.getVar('parentSubject') ? _satellite.getVar('parentSubject') : '',
+	    'u4': _satellite.getVar('subSubject') ? _satellite.getVar('subSubject') : '',
+	    'send_to': 'DC-5942083/rtg/chegg0+standard'
+	});
+	
+	// Adding additional attributes to the existing gtag file for specific pages
+	path = window.location.href;
+	if(path.match(/\/search/gi) ||
+		path.match(/\/checkout\/hwh/gi) ||
+		path.match(/\/study\/?$/gi) ||
+		path.match(/study\/qa\/post/gi) ||
+		path.match(/study\/qa\/?$/gi) ||
+		path.match(/study\/tbs/gi) ||
+		path.match(/\/shoppingcart/gi) ||
+		path.match(/\/books\/?$/gi) ||
+		_satellite.getVar('pageName') == 'chegg|web|tb|textbook pdp' ||
+		_satellite.getVar('pageName') == 'chegg|web|core|home page'
+		){
+			getProductFormat = function(){
+				var pf = _satellite.getVar('productString');
+				pf = (pf && typeof pf !== 'undefined' && pf !== null) ? pf.match(/\|eVar34=[a-z\/\s]+\|/gi) : '';
+				return pf ? pf.join('').replace(/eVar34=|\|/gi,'') : '';
+			}
+
+			getProductID = function(){
+				var pid = _satellite.getVar('productString');
+				pid = (pid && typeof pid !== 'undefined' && pid !== null) ? pid.match(/(\;[0-9a-zA-Z_]+\;)/gi) : '';
+				return pid ? pid.join(',').replace(/[:;]/gi,'') : '';
+			}
+
+			getMod100 = function(){
+				try {
+			 		var _mcid = _satellite.getVisitorId().getMarketingCloudVisitorID();
+					_mcid = _mcid > 0 ? (_mcid.substring(0,13) % 100).toString() : '';
+					return _mcid;
+			    } catch(e) {
+			    	_satellite.notify('Error in Mod100 function');
+			    	return '';
+			    }
+			}
+
+			getSendToURL = function(){
+				var send_to_value = 'DC-5942083/interact/chegg0+standard'
+				if(_satellite.getVar('pageName') == 'chegg|web|core|home page' && _satellite.getVar('authState') !== 'Logged Out')
+					send_to_value = 'DC-5942083/interact/chegg0+standard';
+				else if(_satellite.getVar('pageName') == 'chegg|web|core|home page' && _satellite.getVar('authState') == 'Logged Out')
+					send_to_value = 'DC-5942083/interact/chegg00+standard';
+				else if(path.match(/\/search/gi))
+					send_to_value = 'DC-5942083/interact/chegg000+standard';
+				else if(path.match(/\/checkout\/hwh/gi))
+					send_to_value = 'DC-5942083/interact/chegg004+standard';
+				else if(path.match(/\/study\/?$/gi))
+					send_to_value = 'DC-5942083/interact/chegg001+standard';
+				else if(path.match(/study\/qa\/post/gi))
+					send_to_value = 'DC-5942083/engage/chegg0+standard';
+				else if(path.match(/study\/qa\/?$/gi))
+					send_to_value = 'DC-5942083/interact/chegg003+standard';
+				else if(path.match(/study\/tbs/gi))
+					send_to_value = 'DC-5942083/interact/chegg002+standard';
+				else if(path.match(/\/shoppingcart/gi))
+					send_to_value = 'DC-5942083/interact/chegg007+standard';
+				else if(path.match(/\/books\/?$/gi))
+					send_to_value = 'DC-5942083/interact/chegg005+standard';
+				else if(_satellite.getVar('pageName') == 'chegg|web|tb|textbook pdp')
+					send_to_value = 'DC-5942083/interact/chegg006+standard';
+				else
+					send_to_value = 'DC-5942083/interact/chegg0+standard'
+				return send_to_value;
+			}
+
+			gtag('config', 'DC-5942083');
+			gtag('event', 'conversion', {
+				'allow_custom_scripts': true,
+				'u1': _satellite.getVar('primaryCategory') ? _satellite.getVar('primaryCategory') : '',
+				'u11': _satellite.getVar('authState') ? _satellite.getVar('authState') : '',
+				'u12': _satellite.getVar('cheggStudySubscriptionStatus') ? _satellite.getVar('cheggStudySubscriptionStatus') : '',
+				'u13': (path.match(/\/study/gi)) ? getProductID() : '',
+				'u14': '',
+				'u15': '',
+				'u16': _satellite.getVar('mathSubscriptionStatus') ? _satellite.getVar('mathSubscriptionStatus') : '',
+				'u17': '',
+				'u18': getMod100(),
+				'u2': _satellite.getVar('subCategory3') ? _satellite.getVar('subCategory3') : '',
+				'u21': _satellite.getVar('checkoutFlowName') ? _satellite.getVar('checkoutFlowName') : '',
+				'u22': _satellite.getVar('couponCode') ? _satellite.getVar('couponCode') : '',
+				'u23': _satellite.getVar('transactionID') ? _satellite.getVar('transactionID') : '',
+				'u24': getProductFormat(),
+				'u3': _satellite.getVar('parentSubject') ? _satellite.getVar('parentSubject') : '',
+				'u4': _satellite.getVar('subSubject') ? _satellite.getVar('subSubject') : '',
+				'u5': _satellite.getVar('subSubSubject') ? _satellite.getVar('subSubSubject') : '',
+				'u6': _satellite.getVar('pageName') ? _satellite.getVar('pageName') : '',
+				'u7': _satellite.getVar('pageNameDetailed') ? _satellite.getVar('pageNameDetailed') : '',
+				'u8': _satellite.getVar('tbOrderISBN') ? _satellite.getVar('tbOrderISBN') : '',
+				'send_to': getSendToURL()
+			});
+	}
+} catch(e){_satellite.notify('Error in Google gtag tag')}
+});

@@ -1,0 +1,23 @@
+
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+  {% for post in posts %}
+  
+	    <tr>
+
+	      <th scope="row" >{{post.Table_Number}}</th>
+	      {% if post.graph %}
+	      	<td colspan="2"><a> {{post.Table_Content}}<br></a> <a style="color:blue; font-style:italic" href="{{post.graph.url}}">(See Graph)</a></td>
+	      	{% else %}
+	      	<td colspan="2"><a> {{post.Table_Content}}  </a></td>
+	      {% endif %}
+	      
+	      <td><a href="{{ post.Pdf_File.url }}" target="_blank"><img src="{% static "blog/images/pdf.jpg" %}"></a></td>
+	      <td><a href="{{ post.Excel_File.url }}" target="_blank"><img src="{% static "blog/images/excel.jpg" %}"></a></td>
+
+		</tr>
+
+	{% endfor %}
+  
+{% endblock content %}

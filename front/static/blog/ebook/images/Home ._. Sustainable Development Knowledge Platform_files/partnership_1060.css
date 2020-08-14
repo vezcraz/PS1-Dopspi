@@ -1,0 +1,571 @@
+ @media (max-width:1060px) 
+ 
+	{
+    
+
+
+
+
+  .traffic_lights
+  {
+    
+    width: 60px;
+
+  }
+
+
+
+
+    .timeBox
+ {
+ 
+    width:100px;
+ 
+
+ }
+
+
+	
+.halfBannerImage
+{
+height:115px;
+}
+
+ 
+
+		.statementEvent
+	{
+	width: 420px;
+   
+	}
+	
+	
+	.programmeLineContent
+{
+width:620px;
+}
+
+
+.programmeLineContentLong
+{
+width:750px;
+
+
+}
+
+
+
+    .banner
+	{
+	width:940px;
+   }
+
+	.sdgColumn
+{
+width:50px;
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    .communityLeft {
+ 
+    width: 190px;
+  }
+  
+.memberBox
+{
+ 
+	width:53px;
+	
+}
+.memberIcon
+{
+	
+	
+ 
+	width:53px;
+	 border-radius:53px;
+	 height:53px;
+ 
+	 -moz-border-radius: 53px;
+-webkit-border-radius: 53px;
+
+	  
+}
+
+    
+    .communityTitle
+    {
+    	
+    font-size:30px;	
+    }
+    .communityBox {
+ 
+   
+    width:347px;
+ 
+ 
+ 
+}
+
+
+ #theTopMenu_sub
+{
+	 
+	 
+	width:940px;
+}
+
+
+
+.innerArea {
+ 
+   
+    width: 940px;
+ 
+
+
+}
+
+
+
+         	.homeBox
+            	{
+            		 
+            		width:230px;
+            	 
+            		
+            	} 
+				
+				
+		.statementEvent
+	{
+	width: 420px;
+   
+	}
+	
+.homeLeft {
+   
+    width: 710px;
+   
+}
+
+	
+	.programmeLineContent
+{
+width:680px;
+}
+
+
+.programmeLineContentLong
+{
+width:800px;
+
+
+}
+
+
+        .home2
+        {
+        width:227px;
+        }
+        
+
+    .banner
+	{
+	width:940px;
+   }
+
+      .searchcenter
+{
+
+width:940px;
+}
+
+
+.searchresults_home
+{
+ 
+     
+    left: 305px;
+ 
+}
+
+
+   
+   
+	.countryrow
+{
+
+ 
+width:146px;
+ 
+height:170px;
+ 
+
+}
+
+
+	.tabsNew a, .tabsNew a:hover
+{
+ 
+font-size:12px;
+
+}
+
+
+
+	 .videoarea_right
+ {
+
+ width:240px; 
+ 
+ 
+ }
+ 
+ 
+ .sdgRound {
+    border-radius: 45px;
+    height: 45px;
+    width: 45px;
+   
+}
+
+ 
+ 
+  .tfmMiniBox
+{
+ 
+ 
+width:180px;
+ 
+height:190px;
+}
+
+
+
+
+ 		
+.hboxTitle
+	{
+	 
+	color:#fff;
+ 
+	font-weight:700;
+font-size:14px;
+	color:#007BA2;
+	text-decoration:none;
+
+	}
+.hboxTitle a,  .hboxTitle a:hover, .hboxTitle:hover, .hboxTitle a:visited:hover, .hboxTitle:visited
+	{
+	font-size:14px;
+	
+	color:#007BA2;
+ 
+	font-weight:700;
+ 
+	text-decoration:none;
+
+	}
+	
+	
+.hbox .hboxinner2	 .hboxText
+{
+font-size:13px; 
+ 
+margin-top:2px;
+}
+
+
+
+.hbox2
+	{
+	width:178px;
+	height:310px;
+	position:relative;
+	float:left;
+	margin-right:10px;
+	margin-bottom:7px;
+	 background:#fff;
+	margin-top:3px;
+	overflow:none;
+	 
+ 
+ 
+	 }
+	 
+
+.hbox
+	{
+	width:178px;
+	height:310px;
+	position:relative;
+	float:left;
+	margin-right:10px;
+	margin-bottom:7px;
+	 background:#fff;
+	margin-top:3px;
+	overflow:none;
+	 
+ 
+ 
+	 }
+
+.hbox:hover
+	{
+	opacity:0.6;
+	background:#3498DB;
+	cursor: pointer; 
+	 
+	
+ 
+	
+	 
+	}
+
+.htopbox
+	{
+	width:178px;
+	height:160px;
+	 background-size: 100% 100%;
+	 
+	 
+	
+	 
+	}
+ 
+ 
+	
+.hboxinner2	
+	{
+	width:158px;
+	background:#fff;
+	color:#333;
+	padding:10px;
+	height:130px;
+	}
+
+	
+
+.searchForm
+	{
+	position: absolute;
+    top: 63px;
+    left: 180px;
+    
+       z-index: 600;
+	   
+	}
+	
+ 
+	
+	.projectRow .col1 {
+ 
+    width: 650px;
+ 
+}
+
+	
+.goalbox
+	{
+
+	width:146px;
+
+	}
+
+	
+ .topicBox
+	{
+	width:146px;
+	}
+
+.topicBox_top 
+	{
+	width: 146px;
+	}
+
+.topicBox_inner 
+	{
+	width: 126px;
+	}
+
+
+	
+	
+.searchArea
+{
+
+position: absolute;
+    top: 60px;
+    left: 160px;
+    width: 580px;
+    height: 40px;
+    padding: 20px;
+    background: #000;
+    opacity: 0.5;
+    z-index: 500;border-top:5px solid #F90;
+	}
+	
+	
+	.select_search
+{
+width:120px;
+
+}
+	
+	
+	
+.innerArea
+    {
+    width:940px; 
+    }
+
+.bottom
+{
+     width:940px; 
+}
+        
+        
+        .topMiddle
+    {
+    width:940px; 
+        
+    }
+    
+    .topArea
+    {
+    width:940px;
+    }    
+        
+ 
+        
+        
+        .menuArea, .menuArea_sub
+    {
+    width:940px; 
+    }
+   
+   
+        
+        
+.clickbutton
+{
+     
+    width:270px;
+    
+}
+ 
+        
+        
+
+    .leftMenu
+{
+width:157px;
+
+ 
+}
+        
+        
+  
+        
+	#closedLeftMenu
+		{
+		display:none;
+		}
+
+	#theLeftMenu
+		{
+		display:block;
+		}
+
+
+		.homesearchinput {
+ 
+    width: 90px;
+}
+
+
+           .columnRight
+            {
+                
+            
+          
+                width:220px;
+            }
+            
+        
+ 
+        
+                   .homeRight
+            {
+                
+            
+          
+                width:215px;
+            }
+            
+        
+        
+        
+ 
+        
+   
+        .fblogin
+{
+ 
+    width:270px;
+  
+}
+
+        
+
+.col_signin
+{
+ 
+    width:270px;
+     
+}
+
+
+.col_forgotpw
+{
+ 
+    width:270px;
+ 
+}
+
+
+
+.col_newaccount
+{
+ 
+  
+    
+    width:270px;
+}
+
+
+ 
+        
+  .inputtext
+{
+ 
+    width:260px;
+   
+    
+}
+      
+        
+        
+        
+        
+    }
+    

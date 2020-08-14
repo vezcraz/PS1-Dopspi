@@ -1,0 +1,2133 @@
+
+
+	// Wait until the DOM has loaded before querying the document
+			$(document).ready(function(){
+
+
+                	$.post("/showUserMenuSDGs.php",function(result)
+						{
+						$("#accountbox").html(result);
+						});
+
+
+					$.post("/userMenu.php",function(result)
+						{
+						$("#useroption").html(result);
+						});
+
+
+
+
+				$('ul.tabs').each(function(){
+					// For each set of tabs, we want to keep track of
+					// which tab is active and it's associated content
+					var $active, $content, $links = $(this).find('a');
+
+					// If the location.hash matches one of the links, use that as the active tab.
+					// If no match is found, use the first link as the initial active tab.
+					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+					$active.addClass('active');
+					$content = $($active.attr('href'));
+
+					// Hide the remaining content
+					$links.not($active).each(function () {
+						$($(this).attr('href')).hide();
+					});
+
+					// Bind the click event handler
+					$(this).on('click', 'a', function(e){
+						// Make the old tab inactive.
+						$active.removeClass('active');
+						$content.hide();
+
+						// Update the variables with the new link and content
+						$active = $(this);
+						$content = $($(this).attr('href'));
+
+						// Make the tab active.
+						$active.addClass('active');
+						$content.show();
+
+						// Prevent the anchor's default click action
+						e.preventDefault();
+					});
+				});
+			});
+
+
+	 	 function getSMART(id)
+	{
+	$.post("/getSMART.php?id=" + id,function(result)
+		{
+		$("#smart").html(result);
+		});
+	}
+	
+		
+					function getProgressTraffic(commitment)
+		{
+		
+	
+				$.get("/getProgressTraffic.php?p=" + commitment,{},function(result){
+
+				$( "#progressreportsarea" ).html(result);
+				
+				
+			 
+				
+
+				});
+				
+				return false;
+			}		
+	
+
+
+			function getProgressCommitment(id, commitment)
+		{
+		
+	
+				$.post("/searchProgressCommitment.php",{id:id, commitment:commitment},function(result){
+
+				$( "#commitmentlinked" ).html(result);
+				
+				
+				$( "#commitment_search" ).html("");
+				
+
+				});
+				
+				return false;
+			}		
+	
+
+			function searchProgressCommitment(id, str)
+			{
+					$.post("/searchProgressCommitment.php",{id:id, str:str},function(result){
+
+				$( "#commitment_search" ).html(result);
+
+				});
+			}
+			
+			
+			function getCommitmentPartners(id, partner_id)
+			{
+
+						$.post("/getCommitmentPartners.php",{id:id, partner_id:partner_id},function(result){
+
+					$( "#partners_list" ).html(result);
+
+						document.getElementById("partnerstr").value = "";
+						$( "#partners_search" ).html("");
+
+
+					});
+					return false;
+
+			}
+
+			function searchCommitmentPartners(id, str)
+			{
+					$.post("/searchCommitmentPartners.php",{id:id, str:str},function(result){
+
+				$( "#partners_search" ).html(result);
+
+				});
+			}
+
+			function getCommitmentEntity(id, partner_id)
+			{
+
+						$.post("/getCommitmentEntity.php",{id:id, partner_id:partner_id},function(result){
+
+					$( "#entity_list" ).html(result);
+
+						document.getElementById("partnerstr").value = "";
+						$( "#entity_search" ).html("");
+
+
+					});
+					return false;
+
+			}
+
+			
+
+			function searchCommitmentEntity(id, str)
+			{
+					$.post("/searchCommitmentEntity.php",{id:id, str:str},function(result){
+
+				$( "#entity_search" ).html(result);
+
+				});
+			}
+
+function getCommitmentCountries(id, country_id)
+{
+
+
+			$.post("/getCommitmentCountries.php",{id:id, country_id:country_id},function(result){
+
+			
+ 
+
+			 
+		$( "#countries_list" ).html(result);
+
+			document.getElementById("countrystr").value = "";
+			$( "#countries_search" ).html("");
+
+
+		});
+		return false;
+
+}
+
+
+
+function getCommitmentPartnersWeb(partner_id)
+{
+
+$( "#nrofresults").html('<div align="center"><div align="middle"><img src="../../content/images/loadinggrey.gif" style="width:20px;"></div></div>');
+
+$( "#listing" ).html("");
+
+
+
+
+	getSDGsTargetsSelected();
+
+
+
+			$.post("/getCommitmentPartnersWeb.php",{partner_id:partner_id},function(result){
+
+		$( "#partners_list" ).html(result);
+
+			document.getElementById("partnerstr").value = "";
+			$( "#partners_search" ).html("");
+
+			$.post("/search_sdgs_commitments.php",{start:0},function(result){
+
+getSearchTotal();
+
+
+
+
+
+$( "#listing" ).html(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+
+		});
+		return false;
+
+}
+
+
+
+
+
+function getCommitmentCountriesAdd(country_id)
+{
+ 
+			$.post("/getCommitmentCountriesAdd.php",{country_id:country_id},function(result){
+
+		$( "#countries_list" ).html(result);
+
+		 
+			$( "#countries_search" ).html("");
+
+ 
+
+		});
+		return false;
+
+}
+
+
+
+
+function getCommitmentCountriesWeb(country_id)
+{
+
+$( "#nrofresults").html('<div align="center"><div align="middle"><img src="../../content/images/loadinggrey.gif" style="width:40px;"></div></div>');
+
+$( "#listing" ).html("");
+
+
+
+
+
+
+	getSDGsTargetsSelected();
+
+
+			$.post("/getCommitmentCountriesWeb.php",{country_id:country_id},function(result){
+
+		$( "#countries_list" ).html(result);
+
+			document.getElementById("countrystr").value = "";
+			$( "#countries_search" ).html("");
+
+			$.post("/search_sdgs_commitments.php",{start:0},function(result){
+
+getSearchTotal();
+
+
+
+
+
+$( "#listing" ).html(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+
+		});
+		return false;
+
+}
+
+function searchCommitmentPartnersWeb(str)
+{
+		$.post("/searchCommitmentPartnersWeb.php",{str:str},function(result){
+
+	$( "#partners_search" ).html(result);
+
+	});
+}
+
+
+function searchCommitmentCountriesAdd(str)
+{
+		$.post("/searchCommitmentCountriesAdd.php",{str:str},function(result){
+
+	$( "#countries_search" ).html(result);
+
+	});
+}
+
+
+
+
+function searchCommitmentCountriesWeb(str)
+{
+		$.post("/searchCommitmentCountriesWeb.php",{str:str},function(result){
+
+	$( "#countries_search" ).html(result);
+
+	});
+}
+
+
+
+function searchCommitmentCountries(id, str)
+{
+		$.post("/searchCommitmentCountries.php",{id:id, str:str},function(result){
+
+	$( "#countries_search" ).html(result);
+
+	});
+}
+
+
+
+ function getVCUpdates(id)
+	{
+	$.post("/getVCUpdates.php?id=" + id,function(result)
+		{
+		$("#updates").html(result);
+		});
+	}
+
+
+
+function getTweet(id)
+{
+
+	$.post("/getTweet.php",{id:id},function(result){
+
+
+
+
+$( "#thetweet" ).html(result);
+
+
+
+});
+
+}
+	function delDeliverable(del)
+		{
+
+			$.post("/getNewDeliverables.php",{del:del},function(result){
+
+
+
+
+		$( "#newdelivs" ).html(result);
+
+
+
+		});
+
+		return false;
+
+
+		}
+
+		function followPartnership(id)
+		{
+
+
+
+
+						$.post("/followPartnership.php",{id:id},function(result){
+
+
+
+
+					$( "#followarea").html(result);
+
+					$( "#likedmessage").css("display", "block");
+
+
+	$( "#likedmessage").html("Thank you.");
+
+
+					});
+
+
+		}
+
+		function getForumModerators(id)
+		{
+						$.post("/getForumModerators.php",{id:id},function(result){
+
+					$( "#moderatorsarea").html(result);
+
+					});
+
+		}
+
+
+				function getForumsCommentsSDKP(id)
+		{
+						$.post("/getForumCommentsSDKP.php",{id:id},function(result){
+
+					$( "#commentsarea").html(result);
+
+					});
+
+		}
+
+		
+
+		function getForumsComments(id)
+		{
+						$.post("/getForumComments.php",{id:id},function(result){
+
+					$( "#commentsarea").html(result);
+
+					});
+
+		}
+
+
+
+
+		function getPartnershipComments(id)
+		{
+						$.post("/getPartnershipComments.php",{id:id},function(result){
+
+					$( "#commentsarea").html(result);
+
+					});
+
+		}
+
+
+		function flagPartnership(id)
+		{
+
+
+
+
+						$.post("/flagPartnership.php",{id:id},function(result){
+
+
+
+
+					$( "#likearea").html(result);
+
+
+					$( "#likedmessage").css("display", "block");
+
+
+					$( "#likedmessage").html("Thank you.");
+
+
+
+					});
+
+
+		}
+
+
+function likePartnership(id)
+{
+
+
+
+
+				$.post("/likePartnership.php",{id:id},function(result){
+
+
+
+
+			$( "#likearea").html(result);
+
+
+			$( "#likedmessage").css("display", "block");
+
+
+			$( "#likedmessage").html("Thank you.");
+
+
+
+			});
+
+
+}
+
+		function getUserButtons(id)
+		{
+
+			$.post("/getUserButtons.php",{id:id},function(result){
+
+
+
+
+		$( "#userbuttons" ).html(result);
+
+
+
+		});
+
+
+
+		}
+
+		function getNewDeliverablesEdit(id)
+		{
+
+			$.post("/getNewDeliverablesEdit.php",{id:id, load:1},function(result){
+
+
+
+
+		$( "#newdelivs" ).html(result);
+
+
+
+		});
+
+
+
+		}
+
+
+
+		function getNewDeliverables()
+		{
+
+			$.post("/getNewDeliverables.php",{},function(result){
+
+
+
+
+		$( "#newdelivs" ).html(result);
+
+
+
+		});
+
+
+
+		}
+
+		function getNewResources(id)
+		{
+
+			$.post("/getResourcesEdit.php",{id:id, load:1},function(result){
+
+		$( "#newresources" ).html(result);
+
+
+
+		});
+
+
+
+		}
+
+
+
+
+				function addNewResource(type, resource, id)
+				{
+
+
+					$.post("/getResourcesEdit.php",{type:type, resource:resource, id:id},function(result){
+
+				$( "#newresources" ).html(result);
+
+
+
+
+				});
+
+
+
+				}
+
+
+
+		function addNewDeliverableEdit(deliv_year, deliv_title, id)
+		{
+
+			$.post("/getNewDeliverablesEdit.php",{deliv_year:deliv_year, deliv_title:deliv_title, id:id},function(result){
+
+
+
+
+		$( "#newdelivs" ).html(result);
+
+
+
+		});
+
+
+
+		}
+
+
+
+function addNewDeliverable(deliv_year, deliv_title, deliv_status)
+{
+
+	$.post("/getNewDeliverables.php",{deliv_year:deliv_year, deliv_title:deliv_title, deliv_status:deliv_status },function(result){
+
+
+
+
+$( "#newdelivs" ).html(result);
+
+
+
+});
+
+
+
+}
+
+
+
+function clearNotifications()
+	{
+		$.post("/getNotifications.php",{clear:1},function(result){
+
+	$( "#notificationbox" ).html(result);
+
+	});
+
+	}
+
+		function getReply(div)
+	{
+		$('#' + div).slideToggle();
+
+		return false;
+		
+	}
+
+	
+	
+	function showHideFilters()
+	{
+		$('#filterarea').slideToggle();
+
+	}
+
+
+function showHideNotifications()
+
+{
+
+        $('#searchbox').hide();
+
+		$('#accountbox').hide();
+
+		$('#menubox').hide();
+
+
+		$('#notificationbox').slideToggle();
+
+
+		$.post("/getNotifications.php",{},function(result){
+
+
+	$( "#notificationbox" ).html(result);
+
+
+
+
+});
+
+
+			return false;
+
+}
+
+
+
+
+function showHideMenu()
+
+{
+
+        $('#searchbox').hide();
+
+		$('#accountbox').hide();
+
+		$('#menubox').slideToggle();
+
+			return false;
+
+}
+
+
+
+
+    function showHideSearch()
+
+    {
+
+        $('#accountbox').hide();
+				$('#menubox').hide();
+
+        $('#searchbox').slideToggle();
+
+          return false;
+
+    }
+
+function showHideFocalpointEmail(div)
+{
+
+	statusLine = 	document.getElementById(div).style.display;
+
+$('#' + div).toggle();
+
+
+
+return false;
+
+
+}
+      function showHideAccount(message)
+
+    {
+
+ 
+
+    	$('#accountbox').slideToggle();
+
+
+if(message)
+{
+document.getElementById("usermessage").innerHTML = message;
+
+document.getElementById("usermessage").style.display = "block";
+
+}
+
+else {
+	document.getElementById("usermessage").innerHTML = "";
+
+	document.getElementById("usermessage").style.display = "none";
+
+}
+          return false;
+
+    }
+
+
+
+
+  function countTargetsSearch(id)
+	{
+
+
+
+	if(!document.getElementById(id).checked)
+		{
+		nrtargets	= nrtargets + 1;
+		}
+	else
+		{
+		nrtargets	= nrtargets - 1;
+		}
+
+
+	//document.getElementById("nrtargets_search").innerHTML = nrtargets;
+
+	}
+
+
+
+ function toggleAreaSearch(area, id)
+	{
+
+
+	$(document.getElementById(id)).slideToggle(300);
+
+
+
+	return false;
+
+	}
+
+ function toggleWHSSubs(goal, id)
+	{
+
+
+
+	if(!document.getElementById(goal).checked)
+		{
+		//nrgoals	= nrgoals + 1;
+		}
+	else
+		{
+		//nrgoals	= nrgoals - 1;
+		}
+
+
+
+	$(document.getElementById(id)).slideToggle(300);
+
+
+	//document.getElementById("nrgoals_search").innerHTML = nrgoals;
+
+	return false;
+
+	}
+
+
+
+
+ function toggleTargetsSearch(goal, id)
+	{
+
+
+
+	if(!document.getElementById(goal).checked)
+		{
+		nrgoals	= nrgoals + 1;
+		}
+	else
+		{
+		nrgoals	= nrgoals - 1;
+		}
+
+
+
+	$(document.getElementById(id)).slideToggle(300);
+
+
+	//document.getElementById("nrgoals_search").innerHTML = nrgoals;
+
+	return false;
+
+	}
+
+function getFocalPoints(id)
+{
+	$.post("/getFocalPoints.php",{id:id},function(result){
+
+$( "#focalpoints" ).html(result);
+
+});
+
+}
+
+
+  function getWHSArea(field)
+      {
+
+           $( "#listing" ).html("");
+
+          document.getElementById("moreLoading").style.display = "block";
+
+
+      $.post("/partnerships_whs.php",{start:0, field:field},function(result){
+
+
+
+
+
+    $( "#listing" ).html(result);
+
+  document.getElementById("moreLoading").style.display = "none";
+
+
+
+  });
+
+
+
+      }
+
+
+function getWHSArea(field)
+    {
+
+         $( "#listing" ).html("");
+
+        document.getElementById("moreLoading").style.display = "block";
+
+
+    $.post("/partnerships_whs.php",{start:0, field:field},function(result){
+
+
+
+
+
+  $( "#listing" ).html(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+    }
+
+
+function getWHSActionAreaFilters()
+    {
+
+    $.post("/getWHSActionAreaFilters.php",{},function(result){
+
+
+        //alert(result);
+
+
+        $( "#targets" ).html(result);
+
+
+
+    });
+
+
+
+    }
+
+
+	
+	function getFirstSetSearchInput()
+{
+
+		$( "#nrofresults").html('<div align="center"><div align="middle"><img src="../../content/images/loader.gif" style="width:40px;margin-top:5px;"></div></div>');
+
+
+		
+
+
+document.getElementById("moreLoading").style.display = "block";
+
+
+
+ 
+
+    $.post("/searchinput.php",{start:0},function(result){
+
+
+
+
+ getSearchTotalInput();
+
+
+
+  $( "#listing" ).html(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+}
+
+function getFirstSetSearchVNR(){
+	$( "#nrofresults").html('<div align="center"><div align="middle"><img src="../../content/images/loader.gif" style="width:40px;margin-top:5px;"></div></div>');
+	document.getElementById("moreLoading").style.display = "block";
+    $.post("/searchVNR.php",{start:0},function(result){
+ //getSearchTotalInput();
+		$( "#listing" ).html(result);
+		document.getElementById("moreLoading").style.display = "none";
+	});
+}
+
+
+
+function getFirstSetSearch()
+{
+
+
+$( "#nrofresults").html('<div align="center"><div align="middle"><img src="../../content/images/loadinggrey.gif" style="width:40px;"></div></div>');
+
+document.getElementById("moreLoading").style.display = "block";
+
+
+
+ 
+
+
+    $.post("/search_sdgs_commitments.php",{start:0},function(result){
+
+
+
+
+getViewType();
+
+ getSearchTotal();
+
+
+  $( "#listing" ).html(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+}
+
+
+function setSearchParameterByLink(type, id)
+	{
+
+
+
+		$( "#nrofresults").html('<div align="center"><div align="middle"><img src="../../content/images/loadinggrey.gif" style="width:40px;"></div></div>');
+
+	document.getElementById("moreLoading").style.display = "block";
+
+	if(type == "goal") { $('#' + "goal" + id).attr('checked', false); }
+
+	if(type == "area") { $('#' + "target" + id).attr('checked', false); }
+
+	//$('#' + "targets" + id).find('input[type=checkbox]:checked').removeAttr('checked');
+
+		$.post("/partnerships_setparameter.php",{type:type, id:id},function(result){
+
+			getSDGsTargetsSelected();
+
+		   $.post("/search_sdgs_commitments.php",{start:0},function(result){
+
+					getSearchTotal();
+
+
+
+					$( "#listing" ).html(result);
+
+					document.getElementById("moreLoading").style.display = "none";
+
+					});
+
+		});
+
+	return false;
+
+	}
+
+
+	function getInputTypes()
+{
+
+	$.post("/getInputTypes.php",{},function(result){
+
+	$( "#inputtypes").html(result);
+});
+
+}
+
+function getProgressReports()
+{
+	document.getElementById("moreLoadingProgress").style.display = "block";
+
+	$.post("/progressreports.php",{start:0},function(result){
+
+
+	$( "#listingreports" ).html(result);
+
+	document.getElementById("moreLoadingProgress").style.display = "none";
+
+});
+
+}
+
+
+function getProgressReportsMore()
+{
+
+document.getElementById("moreButtonProgress").style.display = "none";
+document.getElementById("moreLoadingProgress").style.display = "block";
+
+
+ 	$.post("/progressreports.php",{},function(result){
+
+
+
+
+  $( "#listingreports" ).append(result);
+
+document.getElementById("moreLoadingProgress").style.display = "none";
+
+
+
+});
+
+
+
+}
+
+
+
+
+function getProgressChecks()
+{
+
+	$.post("/getProgressChecks.php",{},function(result){
+
+	$( "#progress_checks").html(result);
+});
+
+}
+
+
+
+function setSearchParameterInput(type, id)
+	{
+
+	document.getElementById("moreButton").style.display = "none";
+document.getElementById("moreLoading").style.display = "none";
+
+
+ 
+ 
+		$( "#nrofresults").html('<div align="center"><div align="middle"><img src="../../content/images/loader.gif" style="width:40px;margin-top:5px;"></div></div>');
+
+
+
+
+		$( "#listing" ).html("");
+
+
+	//document.getElementById("moreLoading").style.display = "block";
+
+
+	//if ($('#' + "goal" + id).is(':checked'))
+	//	{
+	//	$('#' + "targets" + id).find('input[type=checkbox]:checked').removeAttr('checked');
+	 //	}
+
+
+
+		$.post("/input_setparameter.php",{type:type, id:id},function(result){
+
+
+	 
+
+		   $.post("/searchinput.php",{start:0},function(result){
+
+				getSearchTotalInput();
+
+
+
+					$( "#listing" ).html(result);
+
+					document.getElementById("moreLoading").style.display = "none";
+
+					});
+
+		});
+
+	return false;
+
+	}
+	
+function setSearchParameterVNR(type, id)
+	{
+
+	document.getElementById("moreButton").style.display = "none";
+	document.getElementById("moreLoading").style.display = "none";
+	$( "#nrofresults").html('<div align="center"><div align="middle"><img src="../../content/images/loader.gif" style="width:40px;margin-top:5px;"></div></div>');
+	$( "#listing" ).html("");
+	$.post("/vnr_setparameter.php",{type:type, id:id},function(result){ 
+	   $.post("/searchVNR.php",{start:0},function(result){
+			//getSearchTotalInput();
+				$( "#listing" ).html(result);
+				document.getElementById("moreLoading").style.display = "none";
+				});
+		});
+	return false;
+	}
+	
+	
+ function getViewType()
+{
+	
+      	$.post("/partnership/browse/getViewType.php",function(result)
+						{
+						$("#viewtype").html(result);
+						});
+	
+}
+
+
+
+	
+	
+function setSearchParameter(type, id)
+	{
+
+			$('html, body').animate({
+        scrollTop: $("#listing").offset().top - 400
+    }, 500);
+	
+
+	
+   $( "#listing" ).html("");
+
+ 
+	document.getElementById("moreLoading").style.display = "block";
+	document.getElementById("moreButton").style.display = "none";
+
+	//  getSDGsTargetsSelected();
+
+ 
+    $.post("/search_sdgs_commitments.php",{start:0, type:type, id:id},function(result){
+
+
+	$.post("sdgs_filters.php",{type:type}, function(result)
+		{
+		$("#filter_" + type).html(result);
+		});
+		
+		 
+	getViewType();
+	
+	getSearchTotal();
+	
+	$( "#listing" ).html(result);
+
+	document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+return false;
+
+
+	}
+	
+function setSearchParameterOld(type, id)
+	{
+
+
+
+		$( "#nrofresults").html('<div align="center"><div align="middle"><img src="../../content/images/loadinggrey.gif" style="width:40px;"></div></div>');
+
+
+		$( "#listing" ).html("");
+
+
+	document.getElementById("moreLoading").style.display = "block";
+
+
+	//if ($('#' + "goal" + id).is(':checked'))
+	//	{
+	//	$('#' + "targets" + id).find('input[type=checkbox]:checked').removeAttr('checked');
+	 //	}
+
+
+
+		$.post("/partnerships_setparameter.php",{type:type, id:id},function(result){
+
+
+			getSDGsTargetsSelected();
+
+		   $.post("/search_sdgs_commitments.php",{start:0},function(result){
+
+					getSearchTotal();
+
+
+
+					$( "#listing" ).html(result);
+
+					document.getElementById("moreLoading").style.display = "none";
+
+					});
+
+		});
+
+	return false;
+
+	}
+
+
+function getSDGsTargetsSelected()
+{
+
+
+  $.post("/getSDGsTargetsSelected.php",{},function(result){
+
+
+
+       $( "#sdgstargets").html(result);
+  });
+
+}
+
+
+function getTotalUsers(div)
+{
+
+
+
+
+  $.post("/getTotalUsers.php",{},function(result){
+
+
+
+
+       $("#" + div).html(result);
+  });
+
+}
+
+
+
+function getTotal(div)
+{
+
+
+
+
+  $.post("/getTotal.php",{},function(result){
+
+
+
+
+       $("#" + div).html(result);
+  });
+
+}
+
+
+
+
+function getGoalTotal(goal)
+{
+
+
+  $.post("/getGoalTotal.php",{goal:goal},function(result){
+
+
+       $( "#goal_counter").html(result);
+  });
+
+	$.post("/getSelectArea.php",{goal:goal},function(result){
+
+
+			 $( "#selectarea").html(result);
+	});
+
+
+
+}
+
+function toggleFilterArea(divarea, imagearea)
+{
+
+div = document.getElementById(divarea);
+image = document.getElementById(imagearea);
+ 
+	if(div.style.display == "block") // if open, close
+	{
+	div.style.display	= "none";
+	
+	image.src			= "https://sustainabledevelopment.un.org/content/images/plus.png";
+ 
+	
+	}
+	else
+	{
+		
+		 
+		
+	div.style.display	= "block";
+	
+	image.src			= "https://sustainabledevelopment.un.org/content/images/minus.png";
+ 
+			
+	}
+	
+	return false;
+}	
+
+
+function getSearchTotalInput()
+{
+
+
+  $.post("/getSearchTotalInput.php",{},function(result){
+
+
+
+       $( "#nrofresults").html(result);
+  });
+
+}
+
+
+
+function getSearchTotal()
+{
+
+
+  $.post("/getSearchTotal.php",{},function(result){
+
+
+
+       $( "#nrofresults").html(result);
+  });
+
+}
+
+
+function getMoreSearchInput()
+{
+
+		$( "#nrofresults").html('<div align="center"><div align="middle"><img src="../../content/images/loader.gif" style="width:40px;margin-top:5px;"></div></div>');
+
+ 
+
+document.getElementById("moreButton").style.display = "none";
+document.getElementById("moreLoading").style.display = "block";
+
+
+ 
+
+    $.post("/searchinput.php",{},function(result){
+
+getSearchTotalInput();
+
+
+
+
+  $( "#listing" ).append(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+}
+
+function getMoreSearchVNR()
+{
+	$( "#nrofresults").html('<div align="center"><div align="middle"><img src="../../content/images/loader.gif" style="width:40px;margin-top:5px;"></div></div>');
+	document.getElementById("moreButton").style.display = "none";
+	document.getElementById("moreLoading").style.display = "block";
+    $.post("/searchVNR.php",{},function(result){
+	//getSearchTotalInput();
+		$( "#listing" ).append(result);
+		document.getElementById("moreLoading").style.display = "none";
+	});
+
+}
+
+
+
+function getMoreSearch()
+{
+
+$( "#nrofresults").html('<div align="center"><div align="middle"><img src="../../content/images/loadinggrey.gif" style="width:40px;"></div></div>');
+
+document.getElementById("moreButton").style.display = "none";
+document.getElementById("moreLoading").style.display = "block";
+
+
+  getSDGsTargetsSelected();
+
+
+    $.post("/search_sdgs_commitments.php",{},function(result){
+
+getSearchTotal();
+
+
+
+
+  $( "#listing" ).append(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+}
+
+
+
+
+
+
+function getFirstSetWHS()
+{
+
+
+document.getElementById("moreLoading").style.display = "block";
+
+
+    $.post("/partnerships_whs.php",{start:0},function(result){
+
+
+
+
+
+  $( "#listing" ).html(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+}
+
+
+
+function getMoreWHS()
+{
+
+document.getElementById("moreButton").style.display = "none";
+document.getElementById("moreLoading").style.display = "block";
+
+
+    $.post("/partnerships_whs.php",{},function(result){
+
+
+
+
+  $( "#listing" ).append(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+}
+
+
+
+
+function getActionNetworkMore(source)
+{
+
+document.getElementById("moreButton").style.display = "none";
+document.getElementById("moreLoading").style.display = "block";
+
+
+    $.post("/actionnetwork.php",{source:source},function(result){
+
+
+
+
+  $( "#listing" ).append(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+}
+
+
+
+function setAdminFilter(type, value)
+{
+
+		$( "#listing" ).html("");
+
+	document.getElementById("moreLoading").style.display = "block";
+	document.getElementById("moreButton").style.display = "none";
+
+	$.post("/actionnetwork.php",{source:0, start:0, type:type, value:value},function(result){
+
+
+	$( "#listing" ).html(result);
+
+	document.getElementById("moreLoading").style.display = "none";
+
+});
+
+}
+
+
+
+
+function getActionNetwork(source)
+{
+	document.getElementById("moreLoading").style.display = "block";
+
+	$.post("/actionnetwork.php",{start:0, source:source},function(result){
+
+
+	$( "#listing" ).html(result);
+
+	document.getElementById("moreLoading").style.display = "none";
+
+});
+
+}
+
+
+
+
+function getCommitmentForums()
+{
+
+
+
+    $.post("/getCommitmentForums.php",{},function(result){
+
+			$( "#forums" ).html(result);
+
+
+
+
+});
+
+
+
+}
+
+
+
+function getMoreCountry(country)
+{
+
+document.getElementById("moreButton").style.display = "none";
+document.getElementById("moreLoading").style.display = "block";
+
+
+    $.post("/partnerships_bycountry.php",{country:country},function(result){
+
+
+
+
+  $( "#listing" ).append(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+}
+
+
+function getMorePartner(partner)
+{
+
+document.getElementById("moreButton").style.display = "none";
+document.getElementById("moreLoading").style.display = "block";
+
+    $.post("/partnerships_bypartner.php",{partner:partner},function(result){
+
+  $( "#listing" ).append(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+}
+
+
+function getFirstSetPartner(partner)
+{
+
+	document.getElementById("moreLoading").style.display = "block";
+
+    $.post("/partnerships_bypartner.php",{start:0, partner:partner},function(result){
+
+  $( "#listing" ).html(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+});
+
+}
+
+
+
+function getFirstSetCountry(country)
+{
+
+	document.getElementById("moreLoading").style.display = "block";
+
+    $.post("/partnerships_bycountry.php",{start:0, country:country},function(result){
+
+  $( "#listing" ).html(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+});
+
+}
+
+
+
+function getFirstSetSIDS()
+{
+
+	document.getElementById("moreLoading").style.display = "block";
+
+    $.post("/partnerships_sids.php",{start:0},function(result){
+
+  $( "#listing" ).html(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+});
+
+}
+
+
+function getMoreSIDS()
+{
+
+document.getElementById("moreButton").style.display = "none";
+document.getElementById("moreLoading").style.display = "block";
+
+
+    $.post("/partnerships_sids.php",{},function(result){
+
+
+
+
+  $( "#listing" ).append(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+}
+
+
+
+
+function getFirstSetSource(source)
+{
+
+	document.getElementById("moreLoading").style.display = "block";
+
+    $.post("/partnerships_bysource.php",{start:0, source:source},function(result){
+
+  $( "#listing" ).html(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+});
+
+}
+
+
+
+function getMoreSource(source)
+{
+
+document.getElementById("moreButton").style.display = "none";
+document.getElementById("moreLoading").style.display = "block";
+
+
+    $.post("/partnerships_bysource.php",{source:source},function(result){
+
+
+
+
+  $( "#listing" ).append(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+}
+
+
+
+function setGoalSort(sort, goal)
+{
+
+
+	$( "#listing" ).html('<div align="center"><div align="middle"><img src="https://sustainabledevelopment.un.org/content/images/loader.gif" style="width:50px;margin-top:10px;margin-bottom:10px;"></div></div>');
+
+    document.getElementById("moreLoading").style.display = "block";
+
+    $.post("/partnerships_bygoal.php",{start:0, goal:goal, sort:sort},function(result){
+
+    getGoalTotal(goal);
+
+  $( "#listing" ).html(result);
+
+	document.getElementById("moreLoading").style.display = "none";
+
+});
+
+
+}
+
+
+
+function setTargetFilter(goal, target)
+{
+
+
+$( "#listing" ).html('<div align="center"><div align="middle"><img src="https://sustainabledevelopment.un.org/content/images/loader.gif" style="width:50px;margin-top:10px;margin-bottom:10px;"></div></div>');
+
+    document.getElementById("moreLoading").style.display = "block";
+
+
+
+    $.post("/partnerships_bygoal.php",{start:0, goal:goal, target:target},function(result){
+
+
+
+
+        getGoalTotal(goal);
+
+
+
+  $( "#listing" ).html(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+}
+
+
+function getPartnershipCommentsCount(id)
+	{
+	$.post("/getPartnershipCommentsCount.php",{id:id},function(result){
+
+		$( "#nrofcomments" ).html(result);
+
+$( "#commentnr" ).html(result);
+
+		});
+
+	}
+
+
+
+function getForumCommentsCount(id)
+	{
+	$.post("/getForumCommentsCount.php",{id:id},function(result){
+
+		$( "#nrofcomments" ).html(result);
+
+		});
+
+	}
+
+	function postForumCommentReply(id)
+{
+	    $.post("/postForumCommentReply.php",{id:id, text:document.getElementById("commenttext" + id).value},function(result){
+
+$("#replies" + id).prepend(result);
+
+document.getElementById("commenttext" + id).value = "";
+
+
+
+return false;
+
+
+	});
+
+
+}
+
+	function postPartnershipCommentReply(id)
+{
+	    $.post("/postPartnershipCommentReply.php",{id:id, text:document.getElementById("commenttext" + id).value},function(result){
+
+$("#replies" + id).prepend(result);
+
+document.getElementById("commenttext" + id).value = "";
+
+
+
+return false;
+
+
+	});
+
+
+}
+
+
+function postForumComment(id)
+{
+
+
+
+	    $.post("/postForumComment.php",{id:id, text:document.getElementById("commenttext").value},function(result){
+
+
+$("#commentsarearows").prepend(result);
+
+
+document.getElementById("commenttext").value = "";
+
+getForumCommentsCount(id);
+
+
+return false;
+
+
+	});
+
+
+}
+
+
+
+
+function postPartnershipComment(id)
+{
+
+
+
+	    $.post("/postPartnershipComment.php",{id:id, text:document.getElementById("commenttext").value},function(result){
+
+
+$("#commentsarearows").prepend(result);
+
+
+getPartnershipCommentsCount(id);
+
+
+
+document.getElementById("commenttext").value = "";
+
+return false;
+
+
+	});
+
+
+}
+
+function getTargets(goal)
+{
+
+    $.post("/getTargets.php",{goal:goal},function(result){
+
+
+  $( "#targets" ).html(result);
+
+
+});
+
+
+
+}
+
+
+function getFirstSet(goal)
+{
+
+
+document.getElementById("moreLoading").style.display = "block";
+
+    getTargets(goal);
+
+
+
+
+    $.post("/partnerships_bygoal.php",{start:0, goal:goal},function(result){
+
+
+getGoalTotal(goal);
+
+
+
+  $( "#listing" ).html(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+}
+
+
+
+
+function getMore(goal)
+{
+
+     getTargets(goal);
+
+  getGoalTotal(goal);
+
+
+document.getElementById("moreButton").style.display = "none";
+document.getElementById("moreLoading").style.display = "block";
+
+
+    $.post("/partnerships_bygoal.php",{goal:goal},function(result){
+
+
+
+  $( "#listing" ).append(result);
+
+document.getElementById("moreLoading").style.display = "none";
+
+
+
+});
+
+
+
+}
+
+
+    function showCloseTargets()
+	{
+
+
+	$('#targets').slideToggle();
+
+	}
+
+
+ $(document).ready(function() {
+    $(".jumper").on("click", function( e ) {
+
+        e.preventDefault();
+
+        $("body, html").animate({
+            scrollTop: $( $(this).attr('href') ).offset().top - 70
+        }, 500);
+
+    });
+});
+
+
+
+
+$(document).scroll(function(){
+    if($(this).scrollTop() > 50)
+    {
+
+
+
+
+//	$('.mainMenuArea').css({"display":"none"});
+ //  $('.mainMenuArea2').css({"display":"none"});
+
+
+
+
+
+
+    }
+});
+
+
+$(document).scroll(function(){
+    if($(this).scrollTop() < 50)
+    {
+
+
+	$('.mainMenuArea').css({"display":"block"});
+   $('.mainMenuArea2').css({"display":"block"});
+
+
+
+
+
+
+
+    }
+});

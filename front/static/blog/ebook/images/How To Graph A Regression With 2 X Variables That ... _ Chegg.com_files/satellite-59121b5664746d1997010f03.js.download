@@ -1,0 +1,118 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  try{
+	var analyticsFlag = false;
+	var widgetID = '', pathName = document.location.pathname, pageNameDetailed = window.digitalData.page.pageInfo.pageName;
+	var enableTracking = function(){
+		try{
+			var tlTitle = "";
+			var linkTrackVars = '';
+			var trackAnalytics = function(eventType, param1, param2){
+				try{	
+					if(eventType == 'showAnswer'){
+						s.eVar45  = param1.id;
+						s.events = 'event45';
+						linkTrackVars = 'eVar45';
+						tlTitle = "Article Shown";
+					} else if(eventType == 'feedbackGiven'){
+						s.eVar45 = param2.id;
+						s.events = param1.positive ? 'event43' : 'event44';
+						linkTrackVars = 'eVar45';
+						tlTitle = "Feedback Given";
+					} else if(eventType == 'escalation'){
+						s.eVar45 = param2.id;
+						var answer = param1.name;
+						var regex = /(Chat|Phone|Email|Facebook|Twitter)/gi;
+						answer = answer.match(regex) ? (answer.match(regex)[0]+(answer.match(/\d+/g) ? ":"+answer.match(/\d+/g).join('') : '')) : answer;
+						s.prop46 = answer;
+						s.events = "event46";
+						linkTrackVars = 'eVar45,prop46';
+						tlTitle = "Escalated";
+					} else if(eventType == 'share'){
+						s.eVar45 = param2.id;
+						s.prop47 = param1;// share buttons;
+						s.events = "event47";
+						linkTrackVars = 'eVar45,prop47';
+						tlTitle = "Shared";
+					} else if(eventType == 'widgetExpanded' || eventType == 'widgetCollapsed'){
+						s.events = (eventType === 'widgetExpanded') ? 'event48' : 'event49';
+						linkTrackVars = '';
+						tlTitle = eventType;
+					} 
+					else{
+						return false
+					}
+					linkTrackVars = (linkTrackVars) ? (","+linkTrackVars) : '';
+					s.linkTrackVars = s.apl(s.linkTrackVars, 'events'+linkTrackVars, ",", 2);
+					s.linkTrackEvents=s.events;
+					if(tlTitle){s.tl(this,'o',tlTitle)};
+					s.eVar45 = s.prop46 = s.prop47 = "";
+					s.linkTrackVars = "";
+					s.linkTrackEvents = s.events = "";
+				}catch(e){}
+			}
+			var interactions = {
+				showAnswer: function(answer){trackAnalytics('showAnswer', answer)},
+				feedback: function(feedbackInfo, answer){trackAnalytics('feedbackGiven', feedbackInfo, answer)},
+				escalate: function(channel, answer){trackAnalytics('escalation', channel, answer)},
+				share: function(type, answer){trackAnalytics('share', type, answer)},
+				expandWidget: function(){trackAnalytics('widgetExpanded')},
+				collapseWidget: function(){trackAnalytics('widgetCollapsed')}
+			}
+			if((typeof nanorep !== "undefined") && (typeof nanorep.floatingWidget !== "undefined")){
+				nanorep.floatingWidget.on(interactions)
+			};
+		}catch(e1){}
+	}
+	var addNanoRepWidget = function(widgetID, analyticsFlag) {
+		try{
+			if(widgetID){
+				var script = document.createElement('script');
+				var script2 = document.createElement('script');
+				var s = '!function(t,e,o,c,n,a){var s=this.nanorep=this.nanorep||{};s=s[e]=s[e]||{},s.apiHost=a,s.host=n,s.path=c,s.account=t,s.protocol="https:"===location.protocol?"https:":"http:",s.on=s.on||function(){s._calls=s._calls||[],s._calls.push([].slice.call(arguments))};var p=s.protocol+"//"+n+c+o+"?account="+t,l=document.createElement("script");l.async=l.defer=!0,l.setAttribute("src",p),document.getElementsByTagName("head")[0].appendChild(l)}("chegg","floatingWidget","floating-widget.js","/web/","chegg.nanorep.co");'
+				script.text=s;
+
+				var s2='nanorep.floatingWidget.on({init:function() { this.setConfigId('+widgetID+');this.setContext({"app":"Web"});}});';
+				script2.text=s2;
+
+				document.body.appendChild(script);
+				document.body.appendChild(script2);
+			}
+			if(analyticsFlag == true && _satellite.getVar('oneTrustPerformanceCookie')){enableTracking();}
+		}catch(e){}
+	};
+
+	//var myAccountWidgetID = '1001995891'; // not getting used currently..
+	var nanoRepWidget = {
+		"path" : { 
+			"/books" : {widgetID : '1113848721', analyticsFlag : true},
+			"/sell-textbooks" : {widgetID : '1001990561', analyticsFlag : true},
+			"/test-prep" : {widgetID : '1001989601', analyticsFlag : true},
+			"/textbooks" : {widgetID : '', analyticsFlag : true},// widget is embedded in page
+			"/math-solver" : {widgetID : '', analyticsFlag : true},
+			"/my/account" : {widgetID : '1160605951', analyticsFlag : true},
+			"/my/security" : {widgetID : '1160605951', analyticsFlag : true},
+			"/my/communication" : {widgetID : '1160605951', analyticsFlag : true},
+			"/my/orders" : {widgetID : '1160617831', analyticsFlag : true},
+			"/my/account/my_info-edit_payment_method" : {widgetID : '1163581741', analyticsFlag : true},
+			"/my/account/my_payments" : {widgetID : '1163594901', analyticsFlag : true},
+			"/my/payment" : {widgetID : '1163594901', analyticsFlag : true},
+			"/my/profile" : {widgetID : '1163600181', analyticsFlag : true}
+		},
+		"pageSubCat" : {
+			"Textbook PDP" : {widgetID : '1116878941', analyticsFlag : true}
+		}
+	}
+	if(nanoRepWidget['path'][pathName]) {
+		addNanoRepWidget(nanoRepWidget['path'][pathName]['widgetID'],nanoRepWidget['path'][pathName]['analyticsFlag']);
+	}
+	else if(nanoRepWidget['pageSubCat'][pageNameDetailed]) {
+		addNanoRepWidget(nanoRepWidget['pageSubCat'][pageNameDetailed]['widgetID'],nanoRepWidget['pageSubCat'][pageNameDetailed]['analyticsFlag']);
+	}
+	/*else {
+	  // otherwise wait for window.onload event
+	  window.addEventListener("load", function() {
+		addNanoRepWidget(booksWidgetID);
+	  });
+	}*/
+}catch(ex){_satellite.notify(ex)}
+});

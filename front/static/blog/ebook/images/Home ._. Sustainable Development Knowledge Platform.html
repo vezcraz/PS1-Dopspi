@@ -1,0 +1,1638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0038)https://sustainabledevelopment.un.org/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script type="text/javascript" async="" src="./Home ._. Sustainable Development Knowledge Platform_files/ga.js.download"></script><script type="text/javascript" async="" src="./Home ._. Sustainable Development Knowledge Platform_files/analytics.js.download"></script><script async="" src="./Home ._. Sustainable Development Knowledge Platform_files/js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+  gtag('config', 'UA-35008513-1');
+  </script>
+  <title>Home .:. Sustainable Development Knowledge Platform</title>
+
+
+  
+  <meta name="keywords" content="Ocean Conference 2017">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+  <meta http-equiv="PRAGMA" content="NO-CACHE">
+  <link rel="stylesheet" href="./Home ._. Sustainable Development Knowledge Platform_files/css" media="all">
+  <link rel="stylesheet" href="./Home ._. Sustainable Development Knowledge Platform_files/css(1)" media="all">
+  <link rel="stylesheet" href="./Home ._. Sustainable Development Knowledge Platform_files/css(2)" media="all">
+  <link href="./Home ._. Sustainable Development Knowledge Platform_files/css(3)" rel="stylesheet" type="text/css">
+  <link href="./Home ._. Sustainable Development Knowledge Platform_files/css(4)" rel="stylesheet" type="text/css">
+
+
+  <link href="./Home ._. Sustainable Development Knowledge Platform_files/css(5)" rel="stylesheet" type="text/css">
+  <link href="./Home ._. Sustainable Development Knowledge Platform_files/css(6)" rel="stylesheet" type="text/css">
+
+
+  <script type="text/javascript" src="./Home ._. Sustainable Development Knowledge Platform_files/jquery.js.download"></script>
+
+  <script type="text/javascript" src="./Home ._. Sustainable Development Knowledge Platform_files/workspace.js.download"></script>
+
+  <script type="text/javascript" src="./Home ._. Sustainable Development Knowledge Platform_files/partnerships.js.download"></script>
+
+
+
+
+  <link href="./Home ._. Sustainable Development Knowledge Platform_files/css(7)" rel="stylesheet">
+  <link href="./Home ._. Sustainable Development Knowledge Platform_files/css(5)" rel="stylesheet" type="text/css">
+
+
+
+
+
+  <script type="text/javascript" src="./Home ._. Sustainable Development Knowledge Platform_files/jquery.fancybox-1.3.4.pack.js.download"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="./Home ._. Sustainable Development Knowledge Platform_files/jquery.fancybox-1.3.4.css" media="screen">
+
+  <!-- styles to merge with homepage -->
+  <style>
+    .menu {
+      font-size: 14.98px !important;
+    }
+
+    .half {
+      width: 50%;
+      float: left;
+    }
+
+    .innerHalfLeft {
+      padding-left: 10px;
+    }
+
+    .sdgRoundSmall {
+      height: 25px;
+      width: 25px;
+      float: left;
+      margin-right: 1px;
+      margin-bottom: 0px;
+    }
+
+    .hidden {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+  </style>
+
+
+
+  <script>
+
+
+
+
+
+
+
+    $(document).scroll(function(){
+    if($(this).scrollTop() > 80)
+    {
+
+    $(".unLogo").attr("class", "unLogo_small");
+
+       $(".oceanLogo").attr("class", "oceanLogo_small");
+
+       $(".unTitle").attr("class", "unTitle_small");
+       $(".unSubTitle").attr("class", "unSubTitle_small");
+
+      $(".unSubTitle").attr("class", "unSubTitle_small");
+
+
+
+    $(".menuBottomArea").attr("class", "menuBottomArea_small");
+
+    $("#menuBarArea").attr("class", "menuBarArea_small");
+
+
+  $("#topBarArea").attr("class", "topBarArea_small");
+
+
+     $("#menuBarArea_sub").attr("class", "menuBarArea_sub_small");
+
+    $( "#icons").attr("class", "icons_small");
+
+
+
+    }
+});
+
+
+$(document).scroll(function(){
+    if($(this).scrollTop() < 80)
+    {
+
+
+    $( ".unLogo_small").attr("class", "unLogo");
+
+
+         $(".oceanLogo_small").attr("class", "oceanLogo");
+
+       $(".unTitle_small").attr("class", "unTitle");
+
+     $(".unSubTitle_small").attr("class", "unSubTitle");
+     $(".menuBottomArea_small").attr("class", "menuBottomArea");
+
+
+    $( "#icons").attr("class", "icons");
+
+
+
+    $("#topBarArea").attr("class", "topBarArea");
+
+    $("#menuBarArea").attr("class", "menuBarArea");
+
+     $("#menuBarArea_sub").attr("class", "menuBarArea_sub");
+
+
+
+    }
+});
+
+
+
+    $(document).ready(function() {
+
+
+
+
+        $('ul.tabsNew').each(function() {
+            // For each set of tabs, we want to keep track of
+            // which tab is active and it's associated content
+            var $active, $content, $links = $(this).find('a');
+
+            // If the location.hash matches one of the links, use that as the active tab.
+            // If no match is found, use the first link as the initial active tab.
+            $active = $($links.filter('[href="' + location.hash + '"]')[0] || $links[0]);
+            $active.addClass('active');
+            $content = $($active.attr('href'));
+
+            // Hide the remaining content
+            $links.not($active).each(function() {
+                $($(this).attr('href')).hide();
+            });
+
+            // Bind the click event handler
+            $(this).on('click', 'a', function(e) {
+                // Make the old tab inactive.
+                $active.removeClass('active');
+                $content.hide();
+
+                // Update the variables with the new link and content
+                $active = $(this);
+                $content = $($(this).attr('href'));
+
+                // Make the tab active.
+                $active.addClass('active');
+                $content.show();
+
+                // Prevent the anchor's default click action
+                e.preventDefault();
+            });
+        });
+    });
+
+
+ $(document).ready(function() {
+    $(".jumper").on("click", function( e ) {
+
+        e.preventDefault();
+
+        $("body, html").animate({
+            scrollTop: $( $(this).attr('href') ).offset().top - 200
+        }, 500);
+
+    });
+});
+
+
+
+    $(document).ready(function() {
+
+
+
+
+        $('#miniNavLink_sub').click(function(event) {
+
+
+
+            $('#theTopMenu_sub').slideToggle();
+
+
+        });
+
+
+
+        $('#miniNavLink').click(function(event) {
+
+
+
+            $('#theTopMenu').slideToggle();
+
+
+        });
+
+    });
+    </script>
+
+  <link rel="stylesheet" href="./Home ._. Sustainable Development Knowledge Platform_files/partnership.css" type="text/css">
+  <link rel="stylesheet" href="./Home ._. Sustainable Development Knowledge Platform_files/partnership_1060.css" type="text/css">
+  <link rel="stylesheet" href="./Home ._. Sustainable Development Knowledge Platform_files/partnership_920.css" type="text/css">
+  <link rel="stylesheet" href="./Home ._. Sustainable Development Knowledge Platform_files/partnership_660.css" type="text/css">
+
+
+  <script src="./Home ._. Sustainable Development Knowledge Platform_files/jquery-1.10.2.js.download"></script>
+
+
+
+</head>
+
+<body style="">
+
+
+
+
+
+
+
+  <div class="top" align="center">
+    <div align="middle">
+      <div align="left" class="topMiddle">
+
+
+        <span class="mobilehide">
+          <div style="padding-top:10px;float:left;">
+
+            <img src="./Home ._. Sustainable Development Knowledge Platform_files/image18_4895.jpg" class="house"><a href="http://www.un.org/en/index.html" target="_blank">Welcome to the United Nations</a>
+          </div>
+          <div style="padding-top:10px;float:right;">
+            <a class="navbar-brand mr-0" href="https://www.un.org/development/desa/en/" target="_blank">DESA</a>
+          </div>
+        </span>
+
+
+      </div>
+    </div>
+  </div>
+  <div align="center" id="topBarArea" class="topBarArea">
+    <div align="middle">
+      <div align="left" class="topArea">
+
+
+
+
+        <a href="https://sustainabledevelopment.un.org/"><img id="oceanLogo" src="./Home ._. Sustainable Development Knowledge Platform_files/sdgskp.png" class="oceanLogo"></a>
+
+        <div id="useroption"><a href="https://sustainabledevelopment.un.org/#" onclick="return showHideAccount(&#39;Please sign in to your account to see notifications.&#39;);"><div class="notify_icon"></div></a><div class="icon_div"><a href="https://sustainabledevelopment.un.org/#" onclick="return showHideAccount();"><div class="icon_man"></div></a></div></div>
+
+
+        <div id="notificationbox" class="notificationbox"></div>
+
+
+
+
+        <a href="https://sustainabledevelopment.un.org/"><img id="unLogo" src="./Home ._. Sustainable Development Knowledge Platform_files/sdgskp.png" class="unLogo"></a>
+
+
+
+
+
+
+      </div>
+
+
+
+      <div id="menuBarArea" class="menuBarArea" align="middle">
+
+
+
+
+
+
+
+
+        <div class="menuArea">
+
+
+
+
+
+
+
+
+
+
+          <a href="https://sustainabledevelopment.un.org/#" id="miniNavLink">
+            <div class="menuOption"><img style="border:0px;height:15px;" src="./Home ._. Sustainable Development Knowledge Platform_files/mininav.png"></div>
+          </a>
+
+
+
+          <div id="theTopMenu">
+
+
+            <a href="https://sustainabledevelopment.un.org/">
+              <div class="menu" style="padding-left: 0;">Home</div>
+            </a>
+            <a href="https://sustainabledevelopment.un.org/sdgs">
+              <div class="menu">SDGs</div>
+            </a>
+            <a href="https://sustainabledevelopment.un.org/hlpf">
+              <div class="menu">HLPF</div>
+            </a>
+
+
+            <a href="https://sustainabledevelopment.un.org/memberstates">
+              <div class="menu">States</div>
+            </a>
+            <a href="https://sustainabledevelopment.un.org/topics/sids">
+              <div class="menu">SIDS</div>
+            </a>
+
+
+            <a href="https://sustainabledevelopment.un.org/unsystem">
+              <div class="menu">UN System</div>
+            </a>
+
+            <a href="https://sustainabledevelopment.un.org/mgos">
+              <div class="menu">Stakeholders</div>
+            </a>
+            <a href="https://sustainabledevelopment.un.org/topics">
+              <div class="menu">Topics</div>
+            </a>
+
+
+
+            <a href="https://sustainabledevelopment.un.org/sdinaction">
+              <div class="menu">Partnerships</div>
+            </a>
+
+
+
+            <a href="https://sustainabledevelopment.un.org/resourcelibrary">
+              <div class="menu">Resources</div>
+            </a>
+
+
+
+
+            <a href="https://sustainabledevelopment.un.org/about">
+              <div class="menu">About</div>
+            </a>
+
+
+
+          </div>
+        </div>
+        <div id="clear"></div>
+
+
+
+
+      </div>
+
+
+      <div class="menuBottomArea" align="middle"></div>
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div align="center" class="mainArea">
+
+
+
+
+
+
+    <div align="middle">
+
+      <div align="left" class="innerArea">
+
+
+        <div id="accountbox" class="accountArea">
+
+
+	<div class="wrap">
+
+
+		<div id="usermessage" style="display:none;background:#ccffcc;padding:20px;margin-bottom:10px;border:3px solid #66cc66;"></div>
+
+
+
+
+
+<div id="clear"></div>
+
+
+		<div class="col_signin">
+
+			<div class="mediumWhite">Sign in</div>
+
+			<form method="post" style="padding:0px;margin:0px;">
+
+				<input type="text" name="email" placeholder="Username/E-mail" class="inputtext">
+				<br>
+				<input type="password" placeholder="Password" name="pw" class="inputtext" onkeydown="if (event.keyCode == 13) return signIn(this.form);">
+
+				<div id="signInButton"><input id="clicksignin" type="button" class="clickbutton" onclick="javascript: return signIn(this.form);" name="sign" value="Sign in"></div>
+
+
+			</form>
+
+
+			<div style="color:#ff3333;" id="incorrect"></div>
+
+			<div class="mediumWhite" style="margin-top:20px;">Sign in with Facebook</div>
+
+			<a href="https://sustainabledevelopment.un.org/fblogin.php" alt="Sign in with Facebook"><img src="./Home ._. Sustainable Development Knowledge Platform_files/fblogin.png" class="fblogin"></a>
+
+			<div id="clear"></div>
+
+
+
+		</div>
+
+
+		<div class="col_forgotpw">
+
+			<div class="mediumWhite">Forgot password?</div>
+
+
+			<div id="sendPwForm">
+
+
+
+			 
+
+
+	<form method="post" style="padding:0px;margin:0px;">
+
+		<input type="text" name="email" value="" placeholder="E-mail address" class="inputtext">
+
+		<input id="clicksendpw" type="button" class="clickbutton" onclick="return forgotPw(this.form);" name="sendpw" value="Send"> 
+
+		<div style="height:20px;font-size:12px;color:#ff3333;" id="infosent"></div>
+
+	</form> 
+	
+	
+
+
+			</div>
+
+
+
+
+		</div>
+
+		<div class="col_newaccount">
+
+			<div class="mediumWhite">Create new account</div>
+
+			<div id="createspace">
+
+				<form method="post" style="padding:0px;margin:0px;">
+
+ 
+ 
+			<input type="text" name="firstname" placeholder="First name" class="inputtext" value="">
+
+			<input type="text" name="lastname" placeholder="Last name" class="inputtext" value=""> 
+
+			<input type="text" name="org" placeholder="Organization/entity" class="inputtext" value="">
+
+			<input type="text" name="email" placeholder="E-mail" class="inputtext" value="">
+
+			<input type="text" name="cap" placeholder="Code from box" class="inputtext">
+
+			<img src="./Home ._. Sustainable Development Knowledge Platform_files/getCapCreate.php" id="captcha" style="margin-left:0px;">
+
+
+
+			<a href="https://sustainabledevelopment.un.org/#" onclick="
+			document.getElementById(&#39;captcha&#39;).src=&#39;/getCapCreate.php?&#39;+Math.random(); return false;
+			" id="change-image">Code not readable? Change code.</a>
+
+
+
+			<div id="createButton"><input id="clickCreate" type="button" class="clickbutton" onclick="javascript: return createAccount(this.form);" name="create" value="Create account"></div>
+			
+			
+		 
+  </form>
+  
+   
+ 
+			</div>
+
+		</div>
+
+
+		<div id="clear"></div>
+
+		<div class="col_questions">
+
+			<div class="mediumWhite">Questions?</div>
+
+			<a href="https://sustainabledevelopment.un.org/contact" target="_blank">Contact us here</a>
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div align="center" class="mainArea">
+    <div align="middle">
+      <div align="left" class="innerArea">
+
+
+
+         
+ 
+  <link type="text/css" rel="stylesheet" href="./Home ._. Sustainable Development Knowledge Platform_files/css(8)" media="all">
+  <link type="text/css" rel="stylesheet" href="./Home ._. Sustainable Development Knowledge Platform_files/css(9)" media="all">
+  <link type="text/css" rel="stylesheet" href="./Home ._. Sustainable Development Knowledge Platform_files/css(10)" media="all">
+  <link rel="stylesheet" href="./Home ._. Sustainable Development Knowledge Platform_files/main.e846b66ebf1baf45c74b.css">
+
+</div>
+</div>
+</div>
+<section id="first-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 d-none d-lg-block">
+        <img id="sdgwheel" alt="SDG wheel" class="img-fluid" usemap="#Map" src="./Home ._. Sustainable Development Knowledge Platform_files/sdgwheelnumbers.png">
+        <map name="Map" id="Map">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="234,11,288,23,259,100,234,97" onclick="clickBox(1)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="307,29,356,61,297,122,277,110" onclick="clickBox(2)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="314,138,369,72,408,121,328,160" onclick="clickBox(3)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="334,175,415,134,432,193,342,202" onclick="clickBox(4)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="343,218,434,208,428,272,342,246" onclick="clickBox(5)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="336,259,424,285,398,340,325,285" onclick="clickBox(6)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="315,298,389,353,342,395,295,318" onclick="clickBox(7)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="253,337,281,325,329,404,271,427" onclick="clickBox(8)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="208,341,239,341,256,428,193,430" onclick="clickBox(9)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="167,327,194,338,178,428,119,405" onclick="clickBox(10)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="132,300,153,319,105,397,59,355" onclick="clickBox(11)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="109,261,122,287,51,341,22,285" onclick="clickBox(12)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="102,215,105,245,18,271,12,207" onclick="clickBox(13)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="113,173,104,201,14,192,31,131" onclick="clickBox(14)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="137,135,119,159,37,118,76,68" onclick="clickBox(15)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="88,58,142,26,173,112,150,125" onclick="clickBox(16)">
+          <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="154,20,217,9,218,100,188,105" onclick="clickBox(17)">
+        </map>
+        <!-- <img id="center-image" src="//sustainabledevelopment.un.org/content/images/image_logo_clean10008_60.jpg" alt="sdg decoration image"> -->
+      </div>
+      <!-- starts half col -->
+      <div class="col-lg-7">
+        <div class="row">
+          <div class="col col-sm-3 d-block d-lg-none ">
+            <img id="sdgwheel2" alt="SDG wheel" class="img-fluid" usemap="#Map2" src="./Home ._. Sustainable Development Knowledge Platform_files/sdgwheelnumbers.png">
+            <map name="Map2" id="Map2">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="396,20,487,40,437,170,396,165" onclick="clickBox(1)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="519,50,600,103,502,207,467,186" onclick="clickBox(2)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="530,234,623,123,688,204,553,270" onclick="clickBox(3)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="564,295,701,226,729,326,578,342" onclick="clickBox(4)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="579,368,732,351,723,459,578,416" onclick="clickBox(5)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="567,438,716,482,671,574,549,481" onclick="clickBox(6)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="532,503,656,595,577,667,498,537" onclick="clickBox(7)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="428,569,474,549,555,682,457,720" onclick="clickBox(8)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="352,575,404,575,432,722,326,725" onclick="clickBox(9)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="282,552,327,570,300,722,201,684" onclick="clickBox(10)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="223,507,258,539,178,670,100,599" onclick="clickBox(11)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="184,440,207,485,86,575,38,481" onclick="clickBox(12)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="173,364,178,414,32,457,21,350" onclick="clickBox(13)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="191,293,176,340,24,325,53,222" onclick="clickBox(14)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="231,228,201,269,64,200,129,116" onclick="clickBox(15)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="149,98,240,45,293,190,253,211" onclick="clickBox(16)">
+              <area alt="" title="" href="https://sustainabledevelopment.un.org/#" shape="poly" coords="260,35,367,16,368,170,318,178" onclick="clickBox(17)">
+            </map>
+          </div>
+          <div class="col">
+            <div id="tagline-block">Helping governments and stakeholders make the SDGs a reality</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" style="margin-bottom:2em;">
+            
+ <!--start box-->
+          <div id="mainsdgbox1" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg1">SUSTAINABLE DEVELOPMENT GOAL 1 </a></h2>
+                <h3>End poverty in all its forms everywhere</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg1" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg1#targets"><span class="our-number">
+                  7                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal1/"><span class="our-number">
+                    630                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    23                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+17                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox2" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg2">SUSTAINABLE DEVELOPMENT GOAL 2 </a></h2>
+                <h3>End hunger, achieve food security and improved nutrition and promote sustainable agriculture</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg2" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg2#targets"><span class="our-number">
+                  8                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal2/"><span class="our-number">
+                    597                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    33                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+80                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox3" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg3">SUSTAINABLE DEVELOPMENT GOAL 3 </a></h2>
+                <h3>Ensure healthy lives and promote well-being for all at all ages</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg3" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg3#targets"><span class="our-number">
+                  13                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal3/"><span class="our-number">
+                    523                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    14                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+17                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox4" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg4">SUSTAINABLE DEVELOPMENT GOAL 4 </a></h2>
+                <h3>Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg4" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg4#targets"><span class="our-number">
+                  10                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal4/"><span class="our-number">
+                    936                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    28                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+43                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox5" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg5">SUSTAINABLE DEVELOPMENT GOAL 5 </a></h2>
+                <h3>Achieve gender equality and empower all women and girls</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg5" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg5#targets"><span class="our-number">
+                  9                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal5/"><span class="our-number">
+                    701                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    17                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+96                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox6" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg6">SUSTAINABLE DEVELOPMENT GOAL 6 </a></h2>
+                <h3>Ensure availability and sustainable management of water and sanitation for all</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg6" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg6#targets"><span class="our-number">
+                  8                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal6/"><span class="our-number">
+                    508                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    65                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+164                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox7" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg7">SUSTAINABLE DEVELOPMENT GOAL 7 </a></h2>
+                <h3>Ensure access to affordable, reliable, sustainable and modern energy for all</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg7" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg7#targets"><span class="our-number">
+                  5                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal7/"><span class="our-number">
+                    559                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    66                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+192                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox8" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg8">SUSTAINABLE DEVELOPMENT GOAL 8 </a></h2>
+                <h3>Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg8" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg8#targets"><span class="our-number">
+                  12                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal8/"><span class="our-number">
+                    1004                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    132                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+44                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox9" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg9">SUSTAINABLE DEVELOPMENT GOAL 9 </a></h2>
+                <h3>Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg9" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg9#targets"><span class="our-number">
+                  8                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal9/"><span class="our-number">
+                    385                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    23                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+17                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox10" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg10">SUSTAINABLE DEVELOPMENT GOAL 10 </a></h2>
+                <h3>Reduce inequality within and among countries</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg10" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg10#targets"><span class="our-number">
+                  10                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal10/"><span class="our-number">
+                    353                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    61                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+544                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox11" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg11">SUSTAINABLE DEVELOPMENT GOAL 11 </a></h2>
+                <h3>Make cities and human settlements inclusive, safe, resilient and sustainable</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg11" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg11#targets"><span class="our-number">
+                  10                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal11/"><span class="our-number">
+                    519                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    80                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+254                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox12" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg12">SUSTAINABLE DEVELOPMENT GOAL 12 </a></h2>
+                <h3>Ensure sustainable consumption and production patterns</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg12" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg12#targets"><span class="our-number">
+                  11                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal12/"><span class="our-number">
+                    694                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    49                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+263                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox13" class="sdgbox" style="display: block;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg13">SUSTAINABLE DEVELOPMENT GOAL 13 </a></h2>
+                <h3>Take urgent action to combat climate change and its impacts*
+<br></h3>
+                <a href="https://sustainabledevelopment.un.org/sdg13" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg13#targets"><span class="our-number">
+                  5                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal13/"><span class="our-number">
+                    820                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    92                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+102                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox14" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg14">SUSTAINABLE DEVELOPMENT GOAL 14 </a></h2>
+                <h3>Conserve and sustainably use the oceans, seas and marine resources for sustainable development</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg14" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg14#targets"><span class="our-number">
+                  10                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal14/"><span class="our-number">
+                    1832                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    22                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+281                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox15" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg15">SUSTAINABLE DEVELOPMENT GOAL 15 </a></h2>
+                <h3>Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg15" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg15#targets"><span class="our-number">
+                  12                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal15/"><span class="our-number">
+                    520                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    55                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+136                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox16" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg16">SUSTAINABLE DEVELOPMENT GOAL 16 </a></h2>
+                <h3>Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg16" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg16#targets"><span class="our-number">
+                  12                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal16/"><span class="our-number">
+                    428                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    37                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+55                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+ <!--start box-->
+          <div id="mainsdgbox17" class="sdgbox" style="display: none;">
+            <div class="row">
+              <div class="col">
+                <h2><a href="https://sustainabledevelopment.un.org/sdg17">SUSTAINABLE DEVELOPMENT GOAL 17 </a></h2>
+                <h3>Strengthen the means of implementation and revitalize the global partnership for sustainable development</h3>
+                <a href="https://sustainabledevelopment.un.org/sdg17" class="read d-none d-md-block">Read more</a>
+              </div>
+            </div>
+            <div class="row numbers-line">
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/sdg17#targets"><span class="our-number">
+                  19                <br></span> targets</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <a href="https://sustainabledevelopment.un.org/partnerships/goal17/"><span class="our-number">
+                    967                    <br></span> partnerships</a>
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+                    206                    <br></span> publications
+                </p>
+              </div>
+              <div class="col">
+                <p>
+                  <span class="our-number">
+915                    <br></span> documents
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <!--end box-->
+
+          </div>
+          <!-- end col -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- ends half col -->
+    </div>
+    <!-- end row -->
+  </div>
+  <!-- end container -->
+  <div id="floating-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="quicklinks">
+            <h2>About DSDG</h2>
+            <ul>
+              <li><a href="https://sustainabledevelopment.un.org/about">About the Division for Sustainable
+                  Development Goals</a></li>
+              <li><a href="https://sustainabledevelopment.un.org/topics">Our topics</a></li>
+              <li><a href="https://sustainabledevelopment.un.org/contact">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="quicklinks">
+            <h2>Quick links</h2>
+            <ul>
+              <li><a href="https://sustainabledevelopment.un.org/sdgs">The Sustainable Development Goals</a></li>
+              <li><a href="https://sustainabledevelopment.un.org/post2015/transformingourworld">2030 Agenda</a></li>
+              <li><a href="https://sustainabledevelopment.un.org/TFM/STIForum2019">STI Forum 2019</a></li>
+              <li><a href="https://sustainabledevelopment.un.org/hlpf">High-Level Political Forum</a></li>
+              <li><a href="https://sustainabledevelopment.un.org/tfm">Technology Facilitation Mechanism</a></li>
+              <li><a href="https://sustainabledevelopment.un.org/outcomedocuments/agenda21">Agenda 21</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="quicklinks">
+            <h2>Online Databases</h2>
+            <ul>
+              <li><a href="https://sustainabledevelopment.un.org/partnerships/goodpractices">SDG Good Practices</a></li>
+              <li><a href="https://sustainabledevelopment.un.org/content/unsurvey/index.html">UN System SDGs
+                  Actions Database</a></li>
+              <li><a href="https://sustainabledevelopment.un.org/vnrs/">Voluntary National Reviews Database</a></li>
+              <li><a href="https://sustainabledevelopment.un.org/inputs/">Inputs to HLPF</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="quicklinks">
+            <h2>Partnerships and V. Commitments</h2>
+            <ul>
+              <li><a href="https://sustainabledevelopment.un.org/partnerships/">Partnerships Platform</a></li>
+              <li><a href="https://oceanconference.un.org/commitments/">Ocean Voluntary Commitments Registry</a></li>
+              <li><a href="https://sids2014.org/partnerships/">Partnerships for Small Island Developing States</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+  </div>
+  <!-- ends container -->
+</section>
+<div align="center" class="mainArea">
+  <div align="middle">
+    <div align="left" class="innerArea">
+      <section id="latest-section" class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Featured</h3>
+            <!-- <div class="col-md-12 col-lg-6">
+                <a href="//sustainabledevelopment.un.org/content/unsurvey/index.html">
+                  <div class="featured-image" style="background-image: url('//sustainabledevelopment.un.org/content/images/un-system-actions-database-thumb.png');">
+                  </div>
+                  <h4 class="featured">UN System SDGs Action Database</h4>
+                </a>
+                <p class="featured">The UN System SDGs action online database is the UN family's repository of
+                  actions, initiatives and plans on the implementation of the 2030 Agenda and the sustainable
+                  development goals (SDGs). <a href="//sustainabledevelopment.un.org/content/unsurvey/index.html">Learn
+                    more</a></p>
+              </div> -->
+            <div class="row">
+              <div class="col-md-12 col-lg-6">
+                <a href="https://sustainabledevelopment.un.org/hlpf/2019">
+                  <div class="featured-image" style="background-image: url(&#39;/content/images/image18_8687.jpg&#39;);">
+                  </div>
+                  <h4 class="featured">HLPF July 2019</h4>
+                </a>
+                <p class="featured">The meeting of the high-level political forum on sustainable development in 2019 convened under the auspices of the Economic and Social Council, will be held from <strong>Tuesday, 9 July, to Thursday, 18 July 2019</strong>
+                  <a href="https://sustainabledevelopment.un.org/hlpf/2019">Learn
+                    more</a></p>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <a href="https://sustainabledevelopment.un.org/sdgsummit">
+                  <div class="featured-image" style="background-image: url(&#39;//sustainabledevelopment.un.org/content/images/image18_8244.jpg&#39;);">
+                  </div>
+                  <h4 class="featured">SDG Summit 2019</h4>
+                </a>
+                <p class="featured">On 24 and 25 September 2019, Heads of State and Government will gather at the UNHQ
+                  in NY to follow up and comprehensively review progress in the implementation of the 2030 Agenda for Sustainable Development and the SDGs.
+                  <a href="https://sustainabledevelopment.un.org/sdgsummit">Learn
+                    more</a></p>
+              </div>
+            </div>
+
+
+            <div class="row" style="margin-top:1.5em;">
+              <div class="col-md-12 col-lg-6">
+                <a href="https://sustainabledevelopment.un.org/sids/samoareview">
+                  <div class="featured-image" style="background: url(&#39;//sustainabledevelopment.un.org/content/images/sids2019/island.jpg&#39;);">
+                  </div>
+                  <h4 class="featured">SAMOA Pathway High-Level Midterm Review 2019</h4>
+                </a>
+                <p class="featured">The UN General Assembly (UNGA) at the 71st session in 2016 decided to
+                  convene at UNHQ in September 2019 a one-day high level review of the progress made in
+                  addressing the priorities of small island developing States (SIDS)...
+                  <a href="https://sustainabledevelopment.un.org/sids/samoareview">Learn
+                    more</a> </p>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <a href="https://sustainabledevelopment.un.org/topics">
+                  <div class="featured-image" style="background-image: url(&#39;//sustainabledevelopment.un.org/content/images/imagelarge502_73.jpg&#39;);">
+                  </div>
+                  <h4 class="featured">Topics</h4>
+                </a>
+                <p class="featured">Learn more about sustainable development processes and issues including
+                  ocean, energy, water, small island developing states, global sustainable development
+                  report and more.
+                  <a href="https://sustainabledevelopment.un.org/topics">Learn more</a>
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <h3>Latest News</h3>
+            <div class="list-group">
+              <a href="https://sustainabledevelopment.un.org/partnerships/goodpractices" class="list-group-item list-group-item-action">10 May | The SDG Good Practices have been launched!</a><a href="https://sustainabledevelopment.un.org/content/documents/28122USG_Liu_opening_of_Partnership_Forum.pdf" class="list-group-item list-group-item-action">11 Apr | Opening Statement, 2019 ECOSOC Partnership Forum, by Mr. Liu Zhenmin, USG, UN DESA (PDF)</a><a href="https://sustainabledevelopment.un.org/TFM/STIForum2019" class="list-group-item list-group-item-action">5 Mar | STI Forum 2019 - Call for Side Events and Innovations</a><a href="https://sustainabledevelopment.un.org/climate-sdgs-synergies2019" class="list-group-item list-group-item-action">6 Feb | Register to the Climate and SDGs Synergy Conference in Copenhagen</a>
+              <a href="https://sustainabledevelopment.un.org/news" class="list-group-item list-group-item-action">More news and announcements</a>
+            </div>
+            <h3>Upcoming Events</h3>
+            <div class="list-group">
+              <a href="https://sustainabledevelopment.un.org/?page=view&amp;nr=3140&amp;type=13&amp;menu=1634" class="list-group-item list-group-item-action" target="_blank">12 Jun 2019 - Webinar: Jun 12 Mangrove Restoration for SDG 14: Discover the Potential @ </a>
+<a href="https://sustainabledevelopment.un.org/?page=view&amp;nr=3146&amp;type=13&amp;menu=1634" class="list-group-item list-group-item-action" target="_blank">14 Jun 2019 - Webinar: Jun 14 Mangrove Restoration for SDG 14: Discover the Potential @ </a>
+<a href="https://sustainabledevelopment.un.org/hlpf/2019" class="list-group-item list-group-item-action" target="_blank">8 Jul 2019 - High-Level Political Forum 2019 (HLPF 2019) @ </a>
+              <a href="https://sustainabledevelopment.un.org/calendar" class="list-group-item list-group-item-action">More events</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container">
+        <div class="row">
+          <div class="col">
+            <h3>Sustainable Development Goals</h3>
+            <p>The 17 Sustainable Development Goals (SDGs) are the world's best plan to build a better world for
+              people and our planet by 2030. Adopted by all United Nations Member States in 2015, the SDGs are a
+              call for action by all countries - poor,
+              rich and middle-income - to promote prosperity while protecting the environment. They recognize
+              that ending poverty must go hand-in-hand with strategies that build economic growth and address a
+              range of social needs including education,
+              health, equality and job opportunities, while tackling climate change and working to preserve our
+              ocean and forests. </p>
+            <p>The <a href="https://sustainabledevelopment.un.org/about">Division for Sustainable Development Goals (DSDG)</a> in the United Nations
+              <a href="https://www.un.org/development/desa/en/" target="_blank">Department of Economic and
+                Social Affairs (UNDESA)</a> provides substantive
+              support and capacity-building for the SDGs and their related thematic issues, including <a href="https://sustainabledevelopment.un.org/topics/waterandsanitation">water</a>,
+              <a href="https://sustainabledevelopment.un.org/topics/energy">energy</a>,
+              <a href="https://sustainabledevelopment.un.org/topics/climatechange">climate</a>, <a href="https://sustainabledevelopment.un.org/topics/oceanandseas">oceans</a>,
+              <a href="https://sustainabledevelopment.un.org/topics/sustainablecities">urbanization</a>,
+              <a href="https://sustainabledevelopment.un.org/topics/sustainabletransport">transport</a>, <a href="https://sustainabledevelopment.un.org/topics/science">science
+                and technology</a>, the <a href="https://sustainabledevelopment.un.org/globalsdreport/">Global
+                Sustainable Development Report (GSDR)</a>, <a href="https://sustainabledevelopment.un.org/sdinaction">partnerships</a>
+              and <a href="https://sustainabledevelopment.un.org/topics/sids">Small Island Developing States</a>. DSDG plays a key role in the
+              evaluation of UN systemwide
+              implementation of the 2030 Agenda and on advocacy and outreach activities relating to the <a href="https://sustainabledevelopment.un.org/sdgs">SDGs</a>.</p>
+            <p>
+              <a href="https://sustainabledevelopment.un.org/sdgs">Click here to learn more about the SDGs</a>.
+            </p>
+          </div>
+        </div>
+        <div id="skeleton1">
+          <div class="row">
+            <!-- group of 4 -->
+            <div class="col-sm-4">
+              <div class="row">
+                <div class="col-6" style="padding: 2px;">
+                  <a href="https://sustainabledevelopment.un.org/sdg1"><img id="sdg1" class="img-fluid" alt="SDG1" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-01.png"></a>
+                </div>
+                <div class="col-6" style="padding: 2px;">
+                  <a href="https://sustainabledevelopment.un.org/sdg2"><img id="sdg2" class="img-fluid" alt="SDG2" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-02.png"></a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6" style="padding: 2px;">
+                  <a href="https://sustainabledevelopment.un.org/sdg3"><img id="sdg3" class="img-fluid" alt="SDG3" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-03.png"></a>
+                </div>
+                <div class="col-6" style="padding: 2px;">
+                  <a href="https://sustainabledevelopment.un.org/sdg4"><img id="sdg4" class="img-fluid" alt="SDG4" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-04.png"></a>
+                </div>
+              </div>
+            </div>
+            <!-- end group of 4 -->
+            <!-- large sdg -->
+            <div class="col-sm-6 col-xs-6" style="padding: 2px;">
+              <a href="https://sustainabledevelopment.un.org/sdg5">
+                <div id="sdg5" class="sdgbig"></div>
+              </a>
+            </div>
+            <!-- ends large sdg -->
+            <!-- column of 2 -->
+            <div class="col-sm-2" style="padding: 2px;" id="columnof2">
+              <div class="row">
+                <div class="col-md-12">
+                  <a href="https://sustainabledevelopment.un.org/sdg6"><img id="sdg6" class="img-fluid" alt="SDG6" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-06.png"></a>
+                </div>
+                <div class="col-md-12" style="margin-top:4px;">
+                  <a href="https://sustainabledevelopment.un.org/sdg7"><img id="sdg7" class="img-fluid" alt="SDG7" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-07.png"></a>
+                </div>
+              </div>
+            </div>
+            <!-- end column of 2 -->
+          </div>
+          <!-- end row -->
+          <div class="row">
+            <div class="col-6 col-sm-2" style="padding: 2px;">
+              <a href="https://sustainabledevelopment.un.org/sdg8"><img id="sdg8" class="img-fluid" alt="SDG8" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-08.png"></a>
+            </div>
+            <div class="col-6 col-sm-2" style="padding: 2px;">
+              <a href="https://sustainabledevelopment.un.org/sdg9"><img id="sdg9" class="img-fluid" alt="SDG9" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-09.png"></a>
+            </div>
+            <div class="col-6 col-sm-2" style="padding: 2px;">
+              <a href="https://sustainabledevelopment.un.org/sdg10"><img id="sdg10" class="img-fluid" alt="SDG10" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-10.png"></a>
+            </div>
+            <div class="col-6 col-sm-2" style="padding: 2px;">
+              <a href="https://sustainabledevelopment.un.org/sdg11"><img id="sdg11" class="img-fluid" alt="SDG11" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-11.png"></a>
+            </div>
+            <div class="col-6 col-sm-2" style="padding: 2px;">
+              <a href="https://sustainabledevelopment.un.org/sdgs"><img id="emblem" class="img-fluid" alt="emblem" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG_logo_with_UN_Emblem_square_rgb.png"></a>
+            </div>
+            <div class="col-6 col-sm-2" style="padding: 2px;">
+              <a href="https://sustainabledevelopment.un.org/sdg12"><img id="sdg12" class="img-fluid" alt="SDG12" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-12.png"></a>
+            </div>
+          </div>
+          <!-- end row -->
+          <div class="row">
+            <div class="col-6 col-sm-2" style="padding: 2px;">
+              <a href="https://sustainabledevelopment.un.org/sdg13"><img id="sdg13" class="img-fluid" alt="SDG13" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-13.png"></a>
+            </div>
+            <div class="col-6 col-sm-2" style="padding: 2px;">
+              <a href="https://sustainabledevelopment.un.org/sdg14"> <img id="sdg14" class="img-fluid" alt="SDG14" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-14.png"></a>
+            </div>
+            <div class="col-6 col-sm-2" style="padding: 2px;">
+              <a href="https://sustainabledevelopment.un.org/sdg15"> <img id="sdg15" class="img-fluid" alt="SDG15" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-15.png"></a>
+            </div>
+            <div class="col-6 col-sm-2" style="padding: 2px;">
+              <a href="https://sustainabledevelopment.un.org/sdg16"> <img id="sdg16" class="img-fluid" alt="SDG16" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-16.png"></a>
+            </div>
+            <div class="col-6 col-sm-2" style="padding: 2px;">
+              <a href="https://sustainabledevelopment.un.org/sdg17"><img id="sdg17" class="img-fluid" alt="SDG17" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG goals_icons-individual-rgb-17.png"></a>
+            </div>
+            <div class="col-6 col-sm-2" style="padding: 2px;">
+              <a href="https://sustainabledevelopment.un.org/sdgs"> <img id="sdg18" class="img-fluid" alt="emblem" src="./Home ._. Sustainable Development Knowledge Platform_files/E_SDG_logo_with_UN_Emblem_square_rgb.png"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <link rel="stylesheet" href="./Home ._. Sustainable Development Knowledge Platform_files/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+      <script src="./Home ._. Sustainable Development Knowledge Platform_files/imageMapResizer.min.js.download"></script>
+      <script src="./Home ._. Sustainable Development Knowledge Platform_files/main.e846b66ebf1baf45c74b.js.download"></script>
+      <script>
+        imageMapResize();
+      </script>
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+
+  <div align="center" style="background:#4d4d4d;">
+    <div align="middle">
+      <div align="left" class="bottom">
+        <div class="floatLeft_Half">
+          <div class="topHeadlineGrey">United Nations</div>
+          <ul class="highlights">
+            <li><a href="http://sustainabledevelopment.un.org/contact">Contact us</a></li>
+            <li><a href="http://www.un.org/en/aboutun/copyright/index.html" target="_blank">Copyright</a></li>
+          </ul>
+        </div>
+        <div class="floatLeft_Half">
+        </div>
+        <div id="clear"></div>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+function showHideProgramme(str) {
+            $('#' + str).slideToggle();
+            return false;
+        }
+</script>
+
+</body></html>

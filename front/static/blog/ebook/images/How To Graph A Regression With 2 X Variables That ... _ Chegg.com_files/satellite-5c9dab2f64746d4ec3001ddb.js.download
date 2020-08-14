@@ -1,0 +1,20 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  try {
+    Optanon.OnConsentChanged(function () {
+        _satellite.notify('++++Consent changed++++++');
+        _satellite.notify('+++ ' + _satellite.getVar('oneTrustPerformanceCookie'));
+        _satellite.notify('+++++Calling ADOBE server call +++++++')
+
+        if (_satellite.getVar('oneTrustPerformanceCookie'))  {
+            //adobe.optIn.approve(adobe.OptInCategories.ANALYTICS,true); 
+            adobe.optIn.approveAll();
+            _satellite.notify('+++++Called ADOBE server call +++++++')
+        }
+           });
+
+    
+}
+catch (err) {
+    _satellite.notify('ERROR @ optanon ON consent changed ' + err);
+}
+});

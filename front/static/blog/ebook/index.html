@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./css/page.css">
+<body>
+
+<div>
+
+</div>
+<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:300px !important;" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()" style="margin-bottom: -100px;">Close &times;</button>
+  
+   <div class="blank">
+    <h1 class="section">SECTIONS</h1>
+    <ul class="blank">   
+
+    </ul>
+   </div>
+ <a href="./images/background.html" class="w3-bar-item w3-button"> <span class="iconic"><img src="./images/backinf.png" ></span> Background Information  </a>
+    
+ <a href="./images/forest.html" class="w3-bar-item w3-button"> <span class="iconic"><img src="./images/forestimg.png" ></span>Forest </a>
+  <a href="./images/environment.html" class="w3-bar-item w3-button"><span class="iconic"><img src="./images/envimg.png" ></span>Environment</a>
+  
+</div>
+
+<div class="w3-main" style="margin-left:300px">
+<div class="w3-teal">
+  <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <ul style="float:left" class="topbar">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./Contents.docx">Contents</a></li>
+        <li><a href="./images/message.png">Message</a></li>
+        <li><a href="./images/preface.png">Preface</a></li>
+        <li><a href="./images/highlight.docx">Highlights</a></li>
+        <li><a href="./graph.xlsx">Graphs</a></li>
+        <li><a href="./acronym.xlsx">Acronym</a></li>
+        
+        
+    </ul>
+  </div>
+</div>
+
+<div class="w3-container">
+  <img src="./images/fc.png" id="fc">
+  <table class="table table-striped table-hover">
+  <thead style="background: teal;">
+    <tr>
+      
+      <th scope="col" style="font-size: 1.6em" class=ext >External Links</th>
+  
+    </tr>
+  </thead>
+  <tbody>
+       <tr>
+      
+      <td class="rows"><a href="http://censusindia.gov.in/"><img src="./images/census.png" style="width: 27%;">&nbsp;&nbsp;&nbsp;&nbsp;Census of India        </a></td>
+    </tr>  
+     <tr>
+      
+      <td class="rows"><a href="http://www.mospi.gov.in/publication/compendium-environment-statistics-2016"><img src="./images/mospi.png" style="width: 27%;">&nbsp;&nbsp;&nbsp;&nbsp;MoSPI, GoI         </a></td>
+    </tr>
+    <tr>
+      
+
+
+      <td class="rows"><a href="http://www.westbengalforest.gov.in/"><img src="./images/wbforest.png" style="width: 27%;" >&nbsp;&nbsp;&nbsp;&nbsp;Department of Forest, GoWB   </a></td>
+    </tr>
+      <tr> 
+      
+      <td class="rows"><a href="http://fsi.nic.in/"><img src="./images/fsi.png " style="width: 27%; ">&nbsp;&nbsp;&nbsp;&nbsp;FSI, Eastern Zone, GOI         </a></td>
+    </tr>
+    <tr>
+     
+      <td class="rows"><a href="https://www.wildbengal.com"><img src="./images/wildlife.png" style="width: 27%;" >&nbsp;&nbsp;&nbsp;&nbsp;PCCF (Wildlife), GoWB          </a></td>
+    </tr>
+  <!--   <tr>
+      <th scope="row">2</th>
+      <td><a href="https://www.wildbengal.com">Government of West Bengal Directorate of Forests Wildlife Wing</a></td>
+    </tr> -->
+    <tr>
+      
+      <td class="rows"><a href="https://www.wbpcb.gov.in"><img src="./images/wbpcb.png" style="width: 27%;" >&nbsp;&nbsp;&nbsp;&nbsp;WBPCB, GoWB              </a></td>
+    </tr>
+
+ 
+    <!-- <tr>
+      <th scope="row">5</th>
+      <td><a href="https://wb.gov.in/portal/web/guest/fisheries">Egiye Bangla Fisheries Department</a></td>
+    </tr>-->
+   
+    <!-- <tr>
+      <th scope="row">7</th>
+      <td><a href="https://www.wbhealth.gov.in">Government of West Bengal Health and Family Welfare Deaprtment</a></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><a href="https://www.coalindia.in/index.html">Coal India Limited</a></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td><a href="http://www.pngrb.gov.in/">Petroleum and Natural Gas Regulatory Board</a></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><a href="https://www.wbreda.org">West Bengal Renewable Energy Development Agency</a></td>
+    </tr>
+    <tr> -->
+     
+
+   
+  </tbody>
+</table>
+
+</div>
+   
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+   <script type="text/javascript" src="C:\Users\MUDIT\Music\jquery-3.4.1.js"></script> 
+<script type="text/javascript" src="lol.js"></script>    
+</body>
+</html>

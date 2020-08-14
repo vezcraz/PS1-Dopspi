@@ -1,0 +1,15 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  var ele = document.createElement("script");
+ele.setAttribute( 'src', "//static.criteo.net/js/ld/ld.js" );
+ele.async = 'true';
+document.body.appendChild( ele );
+
+var deviceType = /iPad/.test(navigator.userAgent) ? "t" : /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Silk/.test(navigator.userAgent) ? "m" : "d";
+
+window.criteo_q = window.criteo_q || [];
+window.criteo_q.push(  
+        { event: "setAccount", account: 11156 },
+        { event: "setSiteType", type: deviceType },
+        { event: "viewItem", item: 1, ui_is_qa_user: "1",ui_randnum:_satellite.getVar('randnum')}
+);
+});

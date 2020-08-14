@@ -1,0 +1,17 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  try{
+	if(typeof C !== 'undefined' && typeof C.global !== 'undefined' && C.global.doubleClickActiveExtra && C.global.doubleClickActiveExtra.homeworkhelp == true) {
+           googletag = window.googletag || {};
+           googletag.cmd = googletag.cmd || [];
+           (function() {
+               var gads = document.createElement('script');
+               gads.async = true;
+               gads.type = 'text/javascript';
+               var useSSL = 'https:' == document.location.protocol;
+               gads.src = (useSSL ? 'https:' : 'http:')+'//www.googletagservices.com/tag/js/gpt.js';
+               var node = document.getElementsByTagName('script')[0];
+               node.parentNode.insertBefore(gads, node);
+           })();
+	}
+}catch(e1){_satellite.notify('Error in Double Click Tag '+e1)}
+});

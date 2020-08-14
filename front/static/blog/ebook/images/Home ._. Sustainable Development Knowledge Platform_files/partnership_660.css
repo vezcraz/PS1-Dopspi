@@ -1,0 +1,1891 @@
+
+ @media (max-width:660px) 
+ 
+	{
+
+
+  .colRow_row
+        {
+           height:auto; 
+        }
+
+        .colRow_row .textpart {
+            margin-top: 120px;
+            margin-left: 0px; 
+                        margin-bottom: 40px;
+            padding: 20px;
+        }
+
+        .colRow_row .networkid {
+          
+            left: 10px;
+     
+        }
+
+
+        .colRow_row .image
+{
+ 
+ 
+width:100%;
+ 
+	 
+}
+
+.colRow_row .title {
+    width: 220px;
+}
+
+    .timeBox
+ {
+ 
+    width:150px;
+ 
+
+ }
+
+
+
+	.largeWhitePX
+{
+ 
+    font-size: 30px;
+    
+}
+
+.mediumWhitePX
+{
+ 
+    font-size: 20px;
+ 
+ 
+}
+
+
+
+	
+.halfBannerImage
+{
+height:auto;
+}
+
+.innerHalfLeft
+{
+padding-left:0px;
+}
+
+
+	.half
+{
+width:100%;
+float:left;
+}
+
+	.statementTitle
+{
+ 
+    width: 100%;
+    margin-right: 0px;
+	
+}
+
+	#yearsdgs
+{
+bottom:0px;
+top:auto;
+}
+
+
+
+
+.statsline
+{
+padding-bottom:60px;
+
+}
+	
+		
+		.sdgColumn_value
+{
+display:none;
+
+}
+		
+	
+		.sdgColumn
+{
+width:10px;
+}		
+		
+		
+		
+		
+		
+		.deliv_title {
+    width: 100%;
+    float: left;
+    margin-left: 0px;
+	margin-top:10px;
+	
+}
+
+
+	.knowBox
+{
+	
+	margin-right:0px;
+	width:205px;
+	height:auto;
+}
+
+
+
+.following_new
+{
+	
+ 
+    width:265px;
+  margin-bottom:5px;
+ 	 
+    font-size: 11px;
+ 
+    
+   margin-left:0px;
+    
+     padding-left:0px;
+     padding-right:0px;
+  
+    
+
+	
+}
+
+.mobilehide
+{
+display:none;
+}
+
+.joinEmailOuterArea2
+{
+ 
+    
+  
+    top: 7px;
+    width:200px;
+ left:30px;
+    
+ 
+   
+    
+}
+
+
+.statsbox {
+     
+    margin-bottom: 0px;
+    padding-left:5px;
+	
+	padding-right:5px;
+   }
+   
+.following_not_new
+{
+	
+ 
+  width:265px;
+  margin-bottom:5px;
+    
+   
+    font-size: 11px;
+ 
+    
+   
+   margin-left:0px;
+    
+ 
+    
+     padding-left:0px;
+     padding-right:0px;
+   
+    
+    
+
+	
+}
+ 
+		
+		
+		
+		
+	.communityLine
+{
+	
+	position:relative;height:260px;
+}
+
+
+	
+	  .communityLeft {
+ 
+    width: 265px;
+  }
+  	 
+
+    .communityRight {
+ 
+    width: 265px;
+  }
+  
+  
+  
+  
+	.userMenu
+	{
+		 
+		width:205px;
+		padding:0px;
+		background:#fff;
+		padding:10px;
+		padding-left:50px;
+		padding-right:10px;
+		padding-top:10px;
+		padding-bottom:10px;
+		
+	}
+
+.menu_sub {
+    
+    height: 28px;
+    text-transform: uppercase;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    padding-top: 12px;
+    font-size: 10px;
+    float: left;
+    background:#fff;
+    width:255px;
+    border-bottom:1px solid #4d4d4d;
+    text-decoration: none;
+    font-family: Oswald;
+    margin-right: 5px;
+    color: #222222;
+    
+}
+
+.colRow {
+ 
+    width: 100%;
+	margin-right:0px;
+ 
+}
+
+.colRow .textpart {
+ 
+    width: 235px;
+ 
+}
+
+
+
+ #theTopMenu_sub
+        {
+         display:none;   
+            position:absolute;
+            top:41px;
+        }
+        
+  
+  .menuOption_sub
+    {
+    display:block;   
+     
+     
+   
+
+    }   
+
+
+
+
+
+.communityButtons {
+    width: 265px;
+}
+
+ 
+
+.menuArea_sub
+{
+width:265px;	
+}
+	
+
+	
+	.oceanLogo {
+    height: 30px;
+    
+    top: 34px;
+  
+}
+
+	.oceanLogo_small {
+    height: 30px;
+    
+    top: 25px;
+  
+}
+
+
+.activityArea
+{
+	display:none;
+}
+	.unTitle {
+    
+    left: 40px;
+    top: 25px;
+    
+    font-size: 12px;
+}
+	.unTitle_small {
+    
+    left: 40px;
+    top: 15px;
+    
+    font-size: 12px;
+}
+
+
+
+
+.unSubTitle {
+    
+    left: 40px;
+    top: 45px;
+     
+    font-size: 8px;
+ width:133px;
+}
+
+.unSubTitle_small
+{
+    
+    left: 40px;
+    top: 35px;
+     
+    font-size: 8px;
+ width:133px;
+}
+
+
+
+.following_not {
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 10px;
+ 
+}
+
+
+.communityBox {
+ 
+   
+    width:100%;
+ 
+margin-right:0px;
+ 
+height: auto;
+    padding-bottom: 20px;
+
+}
+
+.updateBox {
+ 
+   
+    width:100%;
+ 
+margin-right:0px;
+ height: auto;
+    padding-bottom: 20px;
+
+
+
+ 
+}
+
+
+.communityTitle
+{
+	width: 100%;
+	
+}
+
+.communityInfo
+{
+	
+	display:none;
+}
+
+.innerArea {
+ 
+   
+    width: 265px;
+ 
+
+
+}
+
+
+ #theTopMenu_sub
+{
+	 
+	 
+	width:265px;
+}
+
+
+
+
+	
+	#numbercommitmentsbar
+{
+display:block; 
+}
+.outerball
+{
+ width: 50px;
+ right: 0px;
+ top: 0px;
+ height: 50px;
+ padding:10px;
+
+ 
+	
+border-radius: 50px;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+
+ 
+}
+.innerball
+{
+width: 50px;
+right: 0px;
+top: 0px;
+height: 50px;
+padding:10px;
+
+border-radius: 50px;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+
+
+ }
+
+.innerball_title
+{
+font-size:24px;
+}
+
+.innerball_text
+{
+font-size:8px;
+} 
+
+
+
+	.q4
+{
+	width:100%;
+}
+
+
+
+.goalInput
+{
+width:100%;
+}
+
+    .projectRow .col1_short
+  		{
+
+  		width:230px;
+      margin-right:0px;
+
+  		}
+
+
+  		.projectRow .col2_short
+  			{
+          margin-top:10px;
+  			width:230px;
+
+margin-right:0px;
+
+  			}
+  			
+  			
+	.statementTitle
+{
+ 
+    width: 100%;
+    margin-right: 0px;
+	
+}
+
+
+
+	.newfeatured3_top
+{
+ 
+width:100%;
+ 
+}
+
+.newfeatured3_bg
+{
+width:100%;
+ 
+
+}
+ 
+
+.newfeatured3
+{
+width:100%;
+}
+
+  
+            
+            .goal_title {
+     
+    font-size: 20px;
+   
+    line-height: 23px;
+}
+            
+            .goal_text {
+    
+    font-size: 13px;
+ 
+}
+
+
+
+	         .logo_clean3 {
+    margin-left: 10px;
+    margin-right: 0px;
+    height: 60px;
+  
+    margin-bottom: 10px;
+
+	
+	}
+        
+		
+		
+		
+	
+	.newfeatured_top
+{
+ 
+width:100%;
+height:220px;
+}
+
+.newfeatured_bg
+{
+ 
+width:100%;
+height:220px;
+}
+
+.newfeatured
+{
+width:100%;
+height:220px;
+}
+ 
+ 
+ 
+	.tabsProgramme a, .tabsProgramme a:hover
+{
+ 
+padding-left:10px;
+padding-right:10px;
+ width:60px;
+ 
+}
+
+.tabsProgramme li 
+{
+margin-bottom:5px;
+}
+
+	.programmeLineContentLong
+{
+width:250px;
+margin-right:0px;
+
+}
+
+
+
+.programmeLineContent
+{
+width:250px;
+margin-right:0px;
+}
+
+.programmeLineType
+{
+margin-top:5px;
+float:right;
+font-size:11px;
+}
+
+.banner
+	{
+	width:265px;
+   }
+   
+            .searchcenter
+{
+
+width:265px;
+}
+
+.searchresults_home
+{
+ 
+     
+    left: 20px;
+ 
+}
+
+
+
+.counterdescription
+{
+ 
+    font-size: 30px;
+ 
+	 
+	
+}
+
+
+
+       .flagicon
+    {
+
+    	float:right;width:50px;
+
+      border:3px solid #ccc;
+    }
+	
+	.bannerBg
+	{
+	height:250px;
+	background-size:cover;
+
+	}
+	
+	
+	
+		.projectRow .col1 {
+ 
+    width: 100%;
+	margin-right:0px;
+	
+ 
+}
+
+.topic_bg {
+    background-size: cover;
+	
+	
+	}
+	
+	
+	
+		.projectRow .col2 {
+ 
+    width: 100%;
+ 
+	
+ 
+}
+
+
+.ThirdBox
+	{
+	float:left;
+	width:100%;
+	margin-right:0px;
+	margin-bottom:20px;
+	color: #666;
+	}
+
+ 
+
+.ThirdBox .wrap
+{
+margin-right:0px;
+height:auto;
+ 
+
+
+}
+
+
+
+
+	 	.countryrow
+{
+
+ 
+width:122px;
+ 
+height:170px;
+ 
+
+}
+
+ 
+ .tabsNew a, .tabsNew a:hover
+{
+width:100%;
+}
+
+	 .tabsNew li {
+    
+  
+    width: 100%;
+    clear: left;
+    margin-bottom: 5px;
+    margin-right: 0px;
+}
+
+
+
+	#twitterBox
+	{
+	display:none;
+	}
+	
+	.hlpfBox {
+     
+    width: 100%;
+    margin-right: 0px;
+ 
+}
+
+.hlpfBox .wrap {
+    height: auto;
+}
+	
+	
+	.sdgRound {
+ 
+    display: none;
+	
+	}
+	
+ .slideimage
+ {
+ width:60px; 
+ 
+ }
+ 
+            .sdText
+    {
+     color:#0a97d9;   
+	  
+          font-weight: 500;
+      font-size: 14px;
+
+      letter-spacing: -0.02em;
+        
+	 
+    }
+    .sdSubText
+    {
+    display:none;
+    }
+        
+        
+ 
+
+	
+	.hlpfBox5 {
+ 
+    width: 100%;
+ 
+}
+
+.hlpfBox5 .wrap {
+    height: auto;
+ 
+}
+
+
+	 .slideHeader
+{
+line-height:20px;
+font-size:15px;
+
+}
+
+.slick-slide
+{
+  height:180px;
+}
+
+ .theslider
+
+    {
+  height:180px;
+
+    }
+	
+	.aSlide
+{
+  height:180px;
+ 
+}
+
+
+    .kpText
+    {
+ 
+	 margin-left:0px;
+	 
+    }
+    
+	
+
+
+
+.slideSub
+{
+margin-bottom:10px;
+
+ font-size:10px;
+
+}
+
+
+
+
+
+	.tfmBox
+
+{
+height:auto;
+
+}
+
+.tfmBox img
+{
+display:none;
+}
+
+
+
+	
+	   .tfmMiniBox
+{
+ 
+ 
+width:265px;
+ margin-right:0px;
+ margin-bottom:1px;
+ 
+height:auto;
+}
+
+.tfmInner
+{
+display:none;
+}
+
+.tfmHeader
+{
+margin-bottom:0px;
+}
+
+
+	 
+ .home2 {
+    width: 265px;
+
+        height: auto;
+    
+    margin-right: 0px;
+
+}
+     
+	#latestlist
+{
+height:150px;
+overflow:auto;
+}
+	
+	 
+
+
+	            #commenttext
+    {
+    	width:160px;
+    	clear:both;
+    }
+
+    
+	    .comment_right_2
+{
+float:left;width:120px;
+}
+
+
+	.comment_right
+{
+float:left;width:190px;
+}
+
+ 	 .replytext
+{
+	width:110px;
+ 
+}
+
+
+
+
+.yearCol
+	 {
+	
+	 margin-left:92px;
+ 
+	 }
+	 
+.yearCol2
+	 {
+	
+	 margin-left:75px;
+ 
+	 }
+	 
+
+	
+ .col2
+	 {
+	margin-bottom:10px;
+	width:112px;
+	 }
+
+	 
+	 
+ .monthCol
+	 {
+	
+	 margin-left:92px;
+ 
+	 }
+	
+
+
+ .col
+	 {
+	margin-bottom:10px;
+	width:225px;
+	max-width:225px;
+	
+	 }
+	 
+	 
+ .contentLine
+	 {
+	width:225px;
+	 max-width:225px;
+	 
+	 }
+	 
+	 
+ 
+.hbox2
+	{
+	width:265px;
+	height:300px;
+	position:relative;
+	float:left;
+	margin-right:10px;
+	margin-bottom:7px;
+	 background:#fff;
+	margin-top:3px;
+	overflow:none;
+	 
+ 
+ 
+	 }
+	 
+.hbox
+	{
+	width:265px;
+	height:300px;
+	position:relative;
+	float:left;
+	margin-right:10px;
+	margin-bottom:7px;
+	 background:#fff;
+	margin-top:3px;
+	overflow:none;
+	 
+ 
+ 
+	 }
+
+.hbox:hover
+	{
+	opacity:0.6;
+	background:#3498DB;
+	cursor: pointer; 
+	 
+	
+ 
+	
+	 
+	}
+
+.htopbox
+	{
+	width:265px;
+	height:160px;
+	 background-size: 100% 100%;
+	 
+	 
+	
+	 
+	}
+ 
+	
+.hboxinner2	
+	{
+	width:245px;
+	background:#fff;
+	color:#333;
+	padding:10px;
+	height:120px;
+	}
+
+	
+ 
+
+.hboxTitle
+	{
+	 
+	color:#fff;
+ 
+	font-weight:700;
+font-size:14px;
+	color:#007BA2;
+	text-decoration:none;
+
+	}
+.hboxTitle a,  .hboxTitle a:hover, .hboxTitle:hover, .hboxTitle a:visited:hover, .hboxTitle:visited
+	{
+	font-size:14px;
+	
+	color:#007BA2;
+ 
+	font-weight:700;
+ 
+	text-decoration:none;
+
+	}
+	
+	
+.hbox .hboxinner2	 .hboxText
+{
+font-size:13px; 
+ 
+margin-top:2px;
+}
+ #videoarea
+	{
+	width:100%; 
+	margin-bottom:10px;
+	height:150px;
+	}
+ 
+   .videoarea_right
+ {
+
+ width:245px; 
+ 
+ 
+ }
+
+ 
+ .topic_bg
+ {
+ 
+ 
+ height:70px;
+ 
+ 
+ }
+ 
+  .topic_textgb
+ {
+ height:70px;
+ top:0px;
+ 
+ }
+  .topic_text
+ {
+  font-size:14px;
+  left:10px;
+  top:10px;
+  
+      width: 245px;
+	  
+ }
+ 
+ 
+ 
+  
+  .countryBox
+{
+  
+width:260px;
+
+ 
+
+}
+
+.countryBox_top {
+    width: 260px;
+ height: 160px; 
+}
+
+ 
+.countryBox_inner {
+    width: 240px;
+ font-size:14px;
+}
+
+
+
+
+ .goalbox
+{
+ 
+width:100%;
+height:265px;
+ 
+}
+
+.goaltext
+{
+ 
+width:245px;
+font-size:13px;
+
+}
+
+.featuredbox_large 
+	{
+	width:205px;
+	padding:30px;
+	}
+	
+	
+.box4 {
+    width: 265px;
+ 
+    margin-right: 0px;
+    margin-bottom: 10px;
+}
+          
+            
+.box4 .box4_top {
+    width: 265px;
+    height: 140px;
+ 
+}
+            
+.box4 .box4_inner {
+    width: 245px;
+ 
+}
+
+
+
+.hbox3
+{
+width:265px;
+margin-bottom:10px;
+margin-right:0px;
+
+}
+
+.hbox3 .htopbox
+{
+width:265px;
+
+}
+
+ 
+ 
+ 
+.hbox3 .hboxinner2	 
+{
+width:245px; 
+font-size:14px;
+}
+
+
+
+
+
+
+
+.hbox4_2
+{
+width:265px;
+margin-bottom:10px;
+margin-right:0px;
+
+}
+
+.hbox4_2 .htopbox
+{
+width:265px;
+
+}
+
+ 
+ 
+ 
+.hbox4_2 .hboxinner2	 
+{
+width:245px; 
+font-size:14px;
+}
+
+
+
+.hbox4
+{
+width:265px;
+margin-bottom:10px;
+margin-right:0px;
+
+}
+
+.hbox4 .htopbox
+{
+width:265px;
+
+}
+
+ 
+ 
+ 
+.hbox4 .hboxinner2	 
+{
+width:245px; 
+font-size:14px;
+}
+
+
+
+        
+.innerArea
+    {
+    width:265px;
+    
+    }
+
+
+     .bottom
+{
+     width:265px; 
+}
+          
+        
+        .topMiddle
+    {
+   width:260px; 
+        
+    }
+    
+    .topArea
+    {
+      width:265px;  
+     
+    }    
+        
+ 
+    .unLogo
+    {
+       height:25px; 
+        
+        left:0px;
+        top:28px;
+        
+         position:absolute;
+        
+    }
+    
+
+    .unLogo_small
+    {
+       height:25px; 
+        
+        left:0px;
+        top:18px;
+        
+         position:absolute;
+        
+    }
+        
+
+     
+.searchArea
+{
+
+ 
+    top: 60px;
+    left: 0px;
+    width: 225px;
+    
+	}
+
+
+.imageLeft_420
+{
+width:260px;
+}
+
+
+		.columnLeft
+			{
+			float:left;
+			width:100%;
+			margin-bottom:10px;
+			}
+			
+			
+			
+			
+ .goalbox
+{
+ 
+width:100%;
+height:265px;
+ 
+}
+
+.goaltext
+{
+ 
+width:245px;
+font-size:13px;
+
+}
+
+ .topicBox
+	{
+	width:265px;
+	margin-right:0px;
+	}
+
+.topicBox_top 
+	{
+	width: 265px;
+	}
+
+.topicBox_inner 
+	{
+	width: 245px;
+	}
+
+	
+	
+
+
+	
+.searchInput
+	{
+	font-size: 12px;
+    
+    width: 205px;
+ 
+	}
+	
+	.searchArea
+{
+
+ 
+    height: 80px;
+ 
+	}
+
+	 .searchButtonNew
+	{
+	
+	
+    height: 38px;
+    font-size: 16px;
+    border: medium none;
+    border-radius: 2px;
+    color: #FFF;
+    width: 225px;
+    background: #1a92b7;
+	margin-top:5px;
+	
+ 
+	
+	}
+	
+
+
+	
+        
+.top
+        {
+         padding-left:10px;
+            padding-right:10px;
+            font-size:10px;
+        }
+        
+ 
+		.top a, .top a:hover, .top a:visited:hover 
+		{
+		 font-size:10px;
+		}
+		
+        
+        .menuArea
+    {
+    width:265px; 
+ 
+    }
+   
+ 
+   
+  
+        
+ 
+      
+        .mainOceanBanner
+{
+   margin-top:139px;
+    height:200px;
+    
+}
+        
+        
+                
+        .float14
+{
+height:30px;float:right;
+    
+}
+    
+        
+   .mainText
+{
+    font-size:32px; 
+}
+
+.mainSubText
+{
+    font-size:14px; 
+}
+
+        
+        
+   .click_login
+        {
+            display:none;
+        }
+     .icons
+    {
+        position:absolute;
+        
+        right:0px;
+		width:45px;
+		
+    }
+    
+        
+        .icons_small
+    {
+               position:absolute;
+        top:0;
+		width:60px;
+		
+        right:0px;
+    }
+      
+  	#useroption
+	{
+	top:25px;
+	
+		 
+	}
+	
+   
+.tabs
+	{
+	
+list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+
+	}
+.tabs li 
+	{
+	list-style:none;
+	display:inline;
+	 
+width:215px;
+	margin-right:0px;
+margin-bottom:5px;
+	}
+
+.tabs a, .tabs a:hover 
+	{
+width:100%;
+
+	 
+	display:inline-block;
+	background:#1a92b7;
+	color:#fff;
+	font-size:11px;
+	text-decoration:none;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:3px;
+	padding-bottom:3px;
+	}
+
+.tabs a:hover 
+	{
+width:100%;
+
+	 
+	display:inline-block;
+	background:#1a92b7;
+	color:#fff;
+	font-size:11px;
+	text-decoration:underline;
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:3px;
+	padding-bottom:3px;
+	}
+
+.tabs a.active 
+	{
+width:100%;
+
+
+ 
+	background:#ff9900;
+	color:#fff;
+	font-size:11px;
+	}
+	
+.tabArea
+	{
+	border-bottom:0px ;
+width:250px;
+	}
+
+	
+	
+   
+   
+    .icon_logged_pic
+    {
+     width:25px;
+	 border-radius:25px;height:25px;
+ 
+ 	 -moz-border-radius: 25px;
+-webkit-border-radius: 25px;
+
+        
+    }
+
+	
+.icon_search
+	{
+	
+	float:left;
+	width:25px;
+
+	height:25px; 
+	background-image:url('/content/images/search.png');
+	margin-right:0px;
+	     background-size:25px 25px;
+
+    }
+    
+.icon_search:hover
+	{
+ 
+	float:left;
+	width:25px;
+
+	height:25px; 
+	background-image:url('/content/images/search_on.png');
+	margin-right:0px;
+	     background-size:25px 25px;
+
+ 
+	cursor:pointer;  
+ 
+		 
+    }
+
+	
+	 
+   
+   .icon_twitter, .icon_fb 
+    {
+ 
+       display:none;
+    }
+    
+        
+  .searchbox
+{
+ 
+    top:94px;
+ 
+}
+ 
+         
+  .homeArrow
+{
+    position:absolute;
+    right:20px;top:20px;
+    display:none;
+    width:30px;
+}
+        
+        
+              
+        	
+.home4 {
+    width: 100%;
+ position:relative;
+    margin-right: 0px;
+    margin-bottom: 10px;
+}
+          
+            
+.home4 .home4_top {
+    width: 100px;
+    background-position: center;
+    height: 140px;
+ 
+}
+            
+.home4 .home4_inner {
+    position:absolute;
+    left:100px;
+    top:0px;
+    height:120px;
+    width: 145px;
+ 
+}
+        
+        
+        
+                .homeLeft
+{
+ width:100%; 
+    
+}
+        
+        
+         .homeRight
+	{
+	width:100%;
+	}
+        
+        
+        .columnRight
+	{
+	width:100%;
+	}
+        
+        
+         .floatLeft_Half
+{
+width:260px;
+ 
+margin-left:0px;
+margin-right:0px;
+margin-bottom:10px;
+}
+
+        
+        
+        
+        .floatRight_300
+{
+width:225px;
+margin-left:0px;
+
+}
+        
+        
+        	#contentArea 
+		{
+		width:265px;
+		}
+        
+        
+
+   	#closedLeftMenu
+		{
+		display:block;
+		}
+
+	#theLeftMenu
+		{
+		display:none;
+		}
+        
+        
+.searchbutton
+{
+ 
+    width:205px;
+    
+   
+    
+}
+
+               .fblogin
+{
+ 
+    width:190px;
+
+}
+        
+        
+        
+      .searchinput
+{
+ 
+    width:200px;
+    margin-bottom: 10px;
+    clear:both;
+
+    
+}       
+
+.col_signin
+{
+ 
+    width:210px;
+     
+}
+
+
+.col_forgotpw
+{
+ 
+    width:210px;
+ margin-top:10px;
+}
+
+
+
+.col_newaccount
+{
+ 
+  
+    
+    width:210px;
+}
+
+
+ .accountbox
+    {
+ 
+    top:94px;
+ 
+
+    }
+
+        
+        
+        
+  .inputtext
+{
+ padding:5px;
+    width:180px;
+   
+    
+}
+      
+        
+ .clickbutton
+{
+     padding:5px;
+    width:192px;
+    height:30px;
+    
+    
+}
+        
+        
+        
+        
+.logoText_small
+{
+
+    left:38px;
+    position:absolute;
+    top:15px;
+    width: 160px;
+    font-weight:700;
+    font-size:12px;
+    text-transform:uppercase;
+
+}
+    
+    
+        
+        
+.logoText
+{
+
+    left:38px;
+    position:absolute;
+    top:15px;
+    width: 160px;
+	
+    font-weight:700;
+    font-size:12px;
+    text-transform:uppercase;
+
+}
+    
+    
+        
+        
+    
+    }

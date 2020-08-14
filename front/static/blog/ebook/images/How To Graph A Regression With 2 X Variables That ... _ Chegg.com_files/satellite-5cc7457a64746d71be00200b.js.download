@@ -1,0 +1,7 @@
+_satellite.pushBlockingScript(function(event, target, $variables){
+  var otScript = document.createElement('script');
+    otScript.language= 'javascript';
+		otScript.src = "https://cdn.cookielaw.org/consent/e3507862-bf2d-46b6-9449-b0fc4ae44403.js";
+    document.getElementsByTagName('head')[0].appendChild(otScript);
+
+});
